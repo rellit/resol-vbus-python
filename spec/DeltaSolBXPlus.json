@@ -1,0 +1,555 @@
+{
+  "vbusSpecification": {
+    "device": [
+      {
+        "address": "0x7112",
+        "mask": "0xFFFF",
+        "name": "DeltaSol BX Plus [Regler]",
+        "isMaster": "true"
+      },
+      {
+        "address": "0x7113",
+        "mask": "0xFFFF",
+        "name": "DeltaSol BX Plus [Module]",
+        "isMaster": "true"
+      },
+      {
+        "address": "0x7121",
+        "mask": "0xFFF0",
+        "name": "DeltaSol BX Plus [Heizkreis #]",
+        "isMaster": "false"
+      },
+      {
+        "address": "0x7131",
+        "mask": "0xFFF0",
+        "name": "DeltaSol BX Plus [WMZ #]",
+        "isMaster": "false"
+      }
+    ],
+    "packet": [
+      {
+        "destination": "0x0010",
+        "source": "0x7112",
+        "command": "0x0100",
+        "field": [
+          {
+            "offset": "0",
+            "name": [
+              "Temperatur Sensor 1",
+              {
+                "-lang": "en",
+                "#text": "Temperature sensor 1"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "2",
+            "name": [
+              "Temperatur Sensor 2",
+              {
+                "-lang": "en",
+                "#text": "Temperature sensor 2"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "4",
+            "name": [
+              "Temperatur Sensor 3",
+              {
+                "-lang": "en",
+                "#text": "Temperature sensor 3"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "6",
+            "name": [
+              "Temperatur Sensor 4",
+              {
+                "-lang": "en",
+                "#text": "Temperature sensor 4"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "8",
+            "name": [
+              "Temperatur Sensor 5",
+              {
+                "-lang": "en",
+                "#text": "Temperature sensor 5"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "10",
+            "name": [
+              "Temperatur Sensor 6",
+              {
+                "-lang": "en",
+                "#text": "Temperature sensor 6"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "12",
+            "name": [
+              "Temperatur Sensor 7",
+              {
+                "-lang": "en",
+                "#text": "Temperature sensor 7"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "14",
+            "name": [
+              "Temperatur Sensor 8",
+              {
+                "-lang": "en",
+                "#text": "Temperature sensor 8"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "16",
+            "name": [
+              "Temperatur Sensor 9",
+              {
+                "-lang": "en",
+                "#text": "Temperature sensor 9"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "18",
+            "name": [
+              "Einstrahlung Sensor 10",
+              {
+                "-lang": "en",
+                "#text": "Irradiation sensor 10"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "1",
+            "unit": " W/qm"
+          },
+          {
+            "offset": "20",
+            "name": [
+              "Temperatur Sensor 11",
+              {
+                "-lang": "en",
+                "#text": "Temperature sensor 19"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "22",
+            "name": [
+              "Temperatur Sensor 12",
+              {
+                "-lang": "en",
+                "#text": "Temperature sensor 20"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "24",
+            "name": [
+              "Volumenstrom Sensor 9",
+              {
+                "-lang": "en",
+                "#text": "Flow sensor 9"
+              }
+            ],
+            "bitSize": "31",
+            "factor": "1",
+            "unit": " l/h"
+          },
+          {
+            "offset": "28",
+            "name": [
+              "Volumenstrom Sensor 11",
+              {
+                "-lang": "en",
+                "#text": "Flow sensor 19"
+              }
+            ],
+            "bitSize": "31",
+            "factor": "1",
+            "unit": " l/h"
+          },
+          {
+            "offset": "32",
+            "name": [
+              "Volumenstrom Sensor 12",
+              {
+                "-lang": "en",
+                "#text": "Flow sensor 20"
+              }
+            ],
+            "bitSize": "31",
+            "factor": "1",
+            "unit": " l/h"
+          },
+          {
+            "offset": "36",
+            "name": [
+              "Druck Sensor 11",
+              {
+                "-lang": "en",
+                "#text": "Pressure sensor 19"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.01",
+            "unit": " bar"
+          },
+          {
+            "offset": "38",
+            "name": [
+              "Druck Sensor 12",
+              {
+                "-lang": "en",
+                "#text": "Pressure sensor 20"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.01",
+            "unit": " bar"
+          },
+          {
+            "offset": "40",
+            "name": [
+              "Drehzahl Relais 1",
+              {
+                "-lang": "en",
+                "#text": "Pump speed 1"
+              }
+            ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "41",
+            "name": [
+              "Drehzahl Relais 2",
+              {
+                "-lang": "en",
+                "#text": "Pump speed 2"
+              }
+            ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "42",
+            "name": [
+              "Drehzahl Relais 3",
+              {
+                "-lang": "en",
+                "#text": "Pump speed 3"
+              }
+            ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "43",
+            "name": [
+              "Drehzahl Relais 4",
+              {
+                "-lang": "en",
+                "#text": "Pump speed 4"
+              }
+            ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "44",
+            "name": [
+              "Drehzahl Relais 5",
+              {
+                "-lang": "en",
+                "#text": "Pump speed 5"
+              }
+            ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "48",
+            "name": [
+              "Systemdatum",
+              {
+                "-lang": "en",
+                "#text": "System date"
+              }
+            ],
+            "bitSize": "31",
+            "format": "r"
+          },
+          {
+            "offset": "52",
+            "name": [
+              "Fehlermaske",
+              {
+                "-lang": "en",
+                "#text": "Error mask"
+              }
+            ],
+            "bitSize": "31"
+          }
+        ]
+      },
+      {
+        "destination": "0x0010",
+        "source": "0x7113",
+        "command": "0x0100",
+        "field": [
+          {
+            "offset": "0",
+            "name": [
+              "Temperatur Modul 1 Sensor 1",
+              {
+                "-lang": "en",
+                "#text": "Temperature module 1 sensor 1"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "2",
+            "name": [
+              "Temperatur Modul 1 Sensor 2",
+              {
+                "-lang": "en",
+                "#text": "Temperature module 1 sensor 2"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "4",
+            "name": [
+              "Temperatur Modul 1 Sensor 3",
+              {
+                "-lang": "en",
+                "#text": "Temperature module 1 sensor 3"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "6",
+            "name": [
+              "Temperatur Modul 1 Sensor 4",
+              {
+                "-lang": "en",
+                "#text": "Temperature module 1 sensor 4"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "8",
+            "name": [
+              "Temperatur Modul 1 Sensor 5",
+              {
+                "-lang": "en",
+                "#text": "Temperature module 1 sensor 5"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "10",
+            "name": [
+              "Temperatur Modul 1 Sensor 6",
+              {
+                "-lang": "en",
+                "#text": "Temperature module 1 sensor 6"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "12",
+            "name": [
+              "Temperatur Modul 2 Sensor 1",
+              {
+                "-lang": "en",
+                "#text": "Temperature module 2 sensor 1"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "14",
+            "name": [
+              "Temperatur Modul 2 Sensor 2",
+              {
+                "-lang": "en",
+                "#text": "Temperature module 2 sensor 2"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "16",
+            "name": [
+              "Temperatur Modul 2 Sensor 3",
+              {
+                "-lang": "en",
+                "#text": "Temperature module 2 sensor 3"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "18",
+            "name": [
+              "Temperatur Modul 2 Sensor 4",
+              {
+                "-lang": "en",
+                "#text": "Temperature module 2 sensor 4"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "20",
+            "name": [
+              "Temperatur Modul 2 Sensor 5",
+              {
+                "-lang": "en",
+                "#text": "Temperature module 2 sensor 5"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "22",
+            "name": [
+              "Temperatur Modul 2 Sensor 6",
+              {
+                "-lang": "en",
+                "#text": "Temperature module 2 sensor 6"
+              }
+            ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          }
+        ]
+      },
+      {
+        "destination": "0x0010",
+        "source": "0x7121",
+        "sourceMask": "0xFFF0",
+        "command": "0x0100",
+        "field": [
+          {
+            "offset": "0",
+            "name": "Vorlauf-Soll-Temperatur",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "2",
+            "name": "Betriebsstatus",
+            "bitSize": "8"
+          }
+        ]
+      },
+      {
+        "destination": "0x0010",
+        "source": "0x7131",
+        "sourceMask": "0xFFF0",
+        "command": "0x0100",
+        "field": [
+          {
+            "offset": "0",
+            "name": "Wärmemenge",
+            "bitSize": "31",
+            "factor": "1",
+            "unit": " Wh"
+          },
+          {
+            "offset": "8",
+            "name": "Wärmemenge heute",
+            "bitSize": "31",
+            "factor": "1",
+            "unit": " Wh"
+          },
+          {
+            "offset": "12",
+            "name": "Wärmemenge Woche",
+            "bitSize": "31",
+            "factor": "1",
+            "unit": " Wh"
+          }
+        ]
+      }
+    ]
+  }
+}
