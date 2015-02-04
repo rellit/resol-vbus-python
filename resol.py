@@ -212,24 +212,19 @@ def integrate_septett(frame):
 # Gets the numerical value of a set of bytes
 def gb(data, begin, end):  # GetBytes
     return sum([ord(b) << (i * 8) for i, b in enumerate(data[begin:end])])
-
-
-# Gets the numerical value of a set of bytes, handling negative numbers by 2-complement
-def int_from_bytes(bytes):
-    negative = False
-    if bytes[0] & 0x80:
-        negative = True
-        for i in range(len(bytes)):
-            bytes[i] = bytes[i] ^ 0xFF
-   
-    int = bytes[0]
-    for b in bytes[1:]:
-        int = (int << 8) + b
-    if negative:
-        int += 1
-        int *= -1
-    return int
-
+    
+    
+# Gets the numerical value of a set of bytes (2s complement)
+def gbc(data, begin, end):  # GetBytes
+    wbg = sum([ord(0xff) << (i * 8) for i, b in enumerate(data[begin:end])])
+    s = sum([ord(b) << (i * 8) for i, b in enumerate(data[begin:end])])
+    
+    
+    if s >= wbg/2:
+        s = wbg - s
+        s *= -1
+    return s
+    
 
 if __name__ == '__main__':
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
