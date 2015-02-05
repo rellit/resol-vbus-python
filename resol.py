@@ -208,21 +208,15 @@ def integrate_septett(frame):
 
     return data
 
-
-# Gets the numerical value of a set of bytes
+    
+# Gets the numerical value of a set of bytes (respect Two's complement by value Range)
 def gb(data, begin, end):  # GetBytes
-    return sum([ord(b) << (i * 8) for i, b in enumerate(data[begin:end])])
-    
-    
-# Gets the numerical value of a set of bytes (2s complement)
-def gbc(data, begin, end):  # GetBytes
-    wbg = sum([ord(0xff) << (i * 8) for i, b in enumerate(data[begin:end])])
+    wbg = sum([0xff << (i * 8) for i, b in enumerate(data[begin:end])])
     s = sum([ord(b) << (i * 8) for i, b in enumerate(data[begin:end])])
     
     
     if s >= wbg/2:
-        s = wbg - s
-        s *= -1
+        s = -1 * (wbg - s)
     return s
     
 
