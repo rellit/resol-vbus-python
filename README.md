@@ -5,7 +5,7 @@ Python Script to read RESOL VBUS Data over LAN
 <<<<<<< HEAD
 =======
 
-I created this script to display data from my solar installation on an info display (see https://github.com/herbstmensch/Spiegel).
+I created this script to display data from my solar installation on an info display (see https://github.com/rellit/InfoMirror).
 
 Usage
 -----
@@ -38,6 +38,9 @@ Some config is needed in order to run this script:
     Spec files are the dictionary to parse VBUS Messages. They are provided in XML by RESOL as part of the RSC (Resol Service Center) download. Just download, install (on linux use wine, it will work) and get the required file for your installation from: {Install_dir}/eclipse/plugins/de.resol.servicecenter.vbus.resol_2.0.0/
 
     Provided specs are in XML format. to convert you can use http://www.utilities-online.info/xmltojson
+    Also, if the "mask" entry (https://github.com/rellit/resol-vbus-python/blob/master/spec/DeltaSolBXPlus.json#L6) should be missing, you need to set that for your system.
+    The correct mask setting can be found here: https://danielwippermann.github.io/resol-vbus/vbus-packets.html
+    
     
 Debug
 -----
