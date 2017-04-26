@@ -131,7 +131,7 @@ def get_payload(msg):
 def parse_payload(msg):
     payload = get_payload(msg)
     for packet in spec.spec['packet']:
-        if packet['source'] == get_source(msg) and packet['destination'] == get_destination(msg) and packet['command'] == get_command(msg):
+        if packet['source'].lower() == get_source(msg).lower() and packet['destination'].lower() == get_destination(msg).lower() and packet['command'].lower() == get_command(msg).lower():
             #print packet
 
             result[get_source_name(msg)] = {}
