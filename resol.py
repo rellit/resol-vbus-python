@@ -136,7 +136,7 @@ def parse_payload(msg):
 
             result[get_source_name(msg)] = {}
             for field in packet['field']:
-                result[get_source_name(msg)][field['name'][0]] = str(gb(payload, int(field['offset']), int(field['offset'])+((int(field['bitSize'])+1) / 8)) * (float(field['factor']) if field.has_key('factor') else 1)) + field['unit'] if 'unit' in field else ''
+                result[get_source_name(msg)][field['name'][0]] = str(gb(payload, int(field['offset']), int(field['offset'])+((int(field['bitSize'])+1) / 8)) * (float(field['factor']) if field.has_key('factor') else 1)) + (field['unit'] if 'unit' in field else '')
 
 
 def format_message_pv1(msg):
