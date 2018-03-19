@@ -191,7 +191,7 @@ def get_compare_length(mask):
 def get_source_name(msg):
     src = format_byte(msg[3]) + format_byte(msg[2])[2:]
     for device in spec.spec['device']:
-        if src[:get_compare_length(device['mask'])] == device['address'][:get_compare_length(device['mask'])]:
+        if src[:get_compare_length(device['mask'])].lower() == device['address'][:get_compare_length(device['mask'])].lower():
             return device['name'] if get_compare_length(device['mask']) == 7 else str(device['name']).replace('#',device['address'][get_compare_length(device['mask'])-1:],1)
     return ""
 
