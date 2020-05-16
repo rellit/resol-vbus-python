@@ -17,11 +17,11 @@ with open(config.spec_file) as json_data:
 
 if config.debug:
     for device in spec['device']:
-        print device
+        print(device)
 
     for packet in spec['packet']:
-        print packet
+        print(packet)
         for field in packet['field']:
-            print "  " + str(field)
+            print("  " + str(field))
 
 json_data.close()

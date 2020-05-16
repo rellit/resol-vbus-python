@@ -40,6 +40,7 @@ def login():
 
 
 def load_data():
+    
     #Request Data
     send("DATA\n")
 
@@ -53,13 +54,14 @@ def load_data():
         buf = readstream()
         msgs = splitmsg(buf)
         for msg in msgs:
+			#print(get_protocolversion(msg))
             if "PV1" == get_protocolversion(msg):
                 if config.debug:
-                    print format_message_pv1(msg)
+                    print(format_message_pv1(msg))
                 parse_payload(msg)
             elif "PV2" == get_protocolversion(msg):
                 if config.debug:
-                    print format_message_pv2(msg)
+                    print(format_message_pv2(msg))
 
 
 # Receive 1024 bytes from stream
@@ -132,7 +134,7 @@ def parse_payload(msg):
     payload = get_payload(msg)
     for packet in spec.spec['packet']:
         if packet['source'].lower() == get_source(msg).lower() and packet['destination'].lower() == get_destination(msg).lower() and packet['command'].lower() == get_command(msg).lower():
-            #print packet
+            #print(packet)
 
             result[get_source_name(msg)] = {}
             for field in packet['field']:
@@ -231,7 +233,7 @@ if __name__ == '__main__':
 
     load_data()
 
-    print json.dumps(result)
+    print(json.dumps(result))
 
     try:
         sock.shutdown(0)
