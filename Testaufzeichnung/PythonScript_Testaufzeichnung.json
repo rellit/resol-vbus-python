@@ -1,0 +1,17 @@
+{
+	"DeltaSol BS 2009": {
+		"E": "0",
+		"S": "1.04",
+		"Betriebsstunden Relais 2": "0.0 h",
+		"Betriebsstunden Relais 1": "38.0 h",
+		"Wärmemenge": "0.0 Wh",
+		"U": "11.0",
+		"V": "0",
+		"Drehzahl Relais 1": "0 %",
+		"Temperatur Sensor 4": "888.8 °C",
+		"Drehzahl Relais 2": "0 %",
+		"Temperatur Sensor 2": "53.3 °C",
+		"Temperatur Sensor 3": "888.8 °C",
+		"Temperatur Sensor 1": "6.1 °C"
+	}
+}
