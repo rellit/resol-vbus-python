@@ -53,6 +53,8 @@ def load_data():
     while len(result) < config.expected_packets:
         buf = readstream()
         msgs = splitmsg(buf)
+        if config.debug:
+          print(str(len(msgs))+" Messages, "+str(len(result))+" Resultlen")
         for msg in msgs:
 			#print(get_protocolversion(msg))
             if "PV1" == get_protocolversion(msg):
@@ -62,7 +64,6 @@ def load_data():
             elif "PV2" == get_protocolversion(msg):
                 if config.debug:
                     print(format_message_pv2(msg))
-
 
 # Receive 1024 bytes from stream
 def recv():
@@ -132,10 +133,12 @@ def get_payload(msg):
 # parse payload and put result in result
 def parse_payload(msg):
     payload = get_payload(msg)
+
+    if config.debug:
+         print('ParsePacket Payload '+str(len(payload)))
+
     for packet in spec.spec['packet']:
         if packet['source'].lower() == get_source(msg).lower() and packet['destination'].lower() == get_destination(msg).lower() and packet['command'].lower() == get_command(msg).lower():
-            #print(packet)
-
             result[get_source_name(msg)] = {}
             for field in packet['field']:
                 result[get_source_name(msg)][field['name'][0]] = str(gb(payload, int(field['offset']), int(field['offset'])+((int(field['bitSize'])+1) / 8)) * (float(field['factor']) if field.has_key('factor') else 1)) + (field['unit'] if 'unit' in field else '')
