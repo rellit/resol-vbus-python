@@ -1,0 +1,202 @@
+{u'isMaster': u'true', u'mask': u'0xFFFF', u'name': u'DeltaSol BX Plus [Regler]', u'address': u'0x7112'}
+{u'isMaster': u'true', u'mask': u'0xFFFF', u'name': u'DeltaSol BX Plus [Module]', u'address': u'0x7113'}
+{u'isMaster': u'false', u'mask': u'0xFFF0', u'name': u'DeltaSol BX Plus [Heizkreis #]', u'address': u'0x7121'}
+{u'isMaster': u'false', u'mask': u'0xFFF0', u'name': u'DeltaSol BX Plus [WMZ #]', u'address': u'0x7131'}
+{u'source': u'0x7112', u'destination': u'0x0010', u'command': u'0x0100', u'field': [{u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 1', {u'-lang': u'en', u'#text': u'Temperature sensor 1'}], u'unit': u' \xb0C', u'offset': u'0'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 2', {u'-lang': u'en', u'#text': u'Temperature sensor 2'}], u'unit': u' \xb0C', u'offset': u'2'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 3', {u'-lang': u'en', u'#text': u'Temperature sensor 3'}], u'unit': u' \xb0C', u'offset': u'4'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 4', {u'-lang': u'en', u'#text': u'Temperature sensor 4'}], u'unit': u' \xb0C', u'offset': u'6'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 5', {u'-lang': u'en', u'#text': u'Temperature sensor 5'}], u'unit': u' \xb0C', u'offset': u'8'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 6', {u'-lang': u'en', u'#text': u'Temperature sensor 6'}], u'unit': u' \xb0C', u'offset': u'10'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 7', {u'-lang': u'en', u'#text': u'Temperature sensor 7'}], u'unit': u' \xb0C', u'offset': u'12'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 8', {u'-lang': u'en', u'#text': u'Temperature sensor 8'}], u'unit': u' \xb0C', u'offset': u'14'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 9', {u'-lang': u'en', u'#text': u'Temperature sensor 9'}], u'unit': u' \xb0C', u'offset': u'16'}, {u'bitSize': u'15', u'factor': u'1', u'name': [u'Einstrahlung Sensor 10', {u'-lang': u'en', u'#text': u'Irradiation sensor 10'}], u'unit': u' W/qm', u'offset': u'18'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 11', {u'-lang': u'en', u'#text': u'Temperature sensor 19'}], u'unit': u' \xb0C', u'offset': u'20'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 12', {u'-lang': u'en', u'#text': u'Temperature sensor 20'}], u'unit': u' \xb0C', u'offset': u'22'}, {u'bitSize': u'31', u'factor': u'1', u'name': [u'Volumenstrom Sensor 9', {u'-lang': u'en', u'#text': u'Flow sensor 9'}], u'unit': u' l/h', u'offset': u'24'}, {u'bitSize': u'31', u'factor': u'1', u'name': [u'Volumenstrom Sensor 11', {u'-lang': u'en', u'#text': u'Flow sensor 19'}], u'unit': u' l/h', u'offset': u'28'}, {u'bitSize': u'31', u'factor': u'1', u'name': [u'Volumenstrom Sensor 12', {u'-lang': u'en', u'#text': u'Flow sensor 20'}], u'unit': u' l/h', u'offset': u'32'}, {u'bitSize': u'15', u'factor': u'0.01', u'name': [u'Druck Sensor 11', {u'-lang': u'en', u'#text': u'Pressure sensor 19'}], u'unit': u' bar', u'offset': u'36'}, {u'bitSize': u'15', u'factor': u'0.01', u'name': [u'Druck Sensor 12', {u'-lang': u'en', u'#text': u'Pressure sensor 20'}], u'unit': u' bar', u'offset': u'38'}, {u'bitSize': u'8', u'name': [u'Drehzahl Relais 1', {u'-lang': u'en', u'#text': u'Pump speed 1'}], u'unit': u' %', u'offset': u'40'}, {u'bitSize': u'8', u'name': [u'Drehzahl Relais 2', {u'-lang': u'en', u'#text': u'Pump speed 2'}], u'unit': u' %', u'offset': u'41'}, {u'bitSize': u'8', u'name': [u'Drehzahl Relais 3', {u'-lang': u'en', u'#text': u'Pump speed 3'}], u'unit': u' %', u'offset': u'42'}, {u'bitSize': u'8', u'name': [u'Drehzahl Relais 4', {u'-lang': u'en', u'#text': u'Pump speed 4'}], u'unit': u' %', u'offset': u'43'}, {u'bitSize': u'8', u'name': [u'Drehzahl Relais 5', {u'-lang': u'en', u'#text': u'Pump speed 5'}], u'unit': u' %', u'offset': u'44'}, {u'bitSize': u'31', u'format': u'r', u'name': [u'Systemdatum', {u'-lang': u'en', u'#text': u'System date'}], u'offset': u'48'}, {u'bitSize': u'31', u'name': [u'Fehlermaske', {u'-lang': u'en', u'#text': u'Error mask'}], u'offset': u'52'}]}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 1', {u'-lang': u'en', u'#text': u'Temperature sensor 1'}], u'unit': u' \xb0C', u'offset': u'0'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 2', {u'-lang': u'en', u'#text': u'Temperature sensor 2'}], u'unit': u' \xb0C', u'offset': u'2'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 3', {u'-lang': u'en', u'#text': u'Temperature sensor 3'}], u'unit': u' \xb0C', u'offset': u'4'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 4', {u'-lang': u'en', u'#text': u'Temperature sensor 4'}], u'unit': u' \xb0C', u'offset': u'6'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 5', {u'-lang': u'en', u'#text': u'Temperature sensor 5'}], u'unit': u' \xb0C', u'offset': u'8'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 6', {u'-lang': u'en', u'#text': u'Temperature sensor 6'}], u'unit': u' \xb0C', u'offset': u'10'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 7', {u'-lang': u'en', u'#text': u'Temperature sensor 7'}], u'unit': u' \xb0C', u'offset': u'12'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 8', {u'-lang': u'en', u'#text': u'Temperature sensor 8'}], u'unit': u' \xb0C', u'offset': u'14'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 9', {u'-lang': u'en', u'#text': u'Temperature sensor 9'}], u'unit': u' \xb0C', u'offset': u'16'}
+  {u'bitSize': u'15', u'factor': u'1', u'name': [u'Einstrahlung Sensor 10', {u'-lang': u'en', u'#text': u'Irradiation sensor 10'}], u'unit': u' W/qm', u'offset': u'18'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 11', {u'-lang': u'en', u'#text': u'Temperature sensor 19'}], u'unit': u' \xb0C', u'offset': u'20'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Sensor 12', {u'-lang': u'en', u'#text': u'Temperature sensor 20'}], u'unit': u' \xb0C', u'offset': u'22'}
+  {u'bitSize': u'31', u'factor': u'1', u'name': [u'Volumenstrom Sensor 9', {u'-lang': u'en', u'#text': u'Flow sensor 9'}], u'unit': u' l/h', u'offset': u'24'}
+  {u'bitSize': u'31', u'factor': u'1', u'name': [u'Volumenstrom Sensor 11', {u'-lang': u'en', u'#text': u'Flow sensor 19'}], u'unit': u' l/h', u'offset': u'28'}
+  {u'bitSize': u'31', u'factor': u'1', u'name': [u'Volumenstrom Sensor 12', {u'-lang': u'en', u'#text': u'Flow sensor 20'}], u'unit': u' l/h', u'offset': u'32'}
+  {u'bitSize': u'15', u'factor': u'0.01', u'name': [u'Druck Sensor 11', {u'-lang': u'en', u'#text': u'Pressure sensor 19'}], u'unit': u' bar', u'offset': u'36'}
+  {u'bitSize': u'15', u'factor': u'0.01', u'name': [u'Druck Sensor 12', {u'-lang': u'en', u'#text': u'Pressure sensor 20'}], u'unit': u' bar', u'offset': u'38'}
+  {u'bitSize': u'8', u'name': [u'Drehzahl Relais 1', {u'-lang': u'en', u'#text': u'Pump speed 1'}], u'unit': u' %', u'offset': u'40'}
+  {u'bitSize': u'8', u'name': [u'Drehzahl Relais 2', {u'-lang': u'en', u'#text': u'Pump speed 2'}], u'unit': u' %', u'offset': u'41'}
+  {u'bitSize': u'8', u'name': [u'Drehzahl Relais 3', {u'-lang': u'en', u'#text': u'Pump speed 3'}], u'unit': u' %', u'offset': u'42'}
+  {u'bitSize': u'8', u'name': [u'Drehzahl Relais 4', {u'-lang': u'en', u'#text': u'Pump speed 4'}], u'unit': u' %', u'offset': u'43'}
+  {u'bitSize': u'8', u'name': [u'Drehzahl Relais 5', {u'-lang': u'en', u'#text': u'Pump speed 5'}], u'unit': u' %', u'offset': u'44'}
+  {u'bitSize': u'31', u'format': u'r', u'name': [u'Systemdatum', {u'-lang': u'en', u'#text': u'System date'}], u'offset': u'48'}
+  {u'bitSize': u'31', u'name': [u'Fehlermaske', {u'-lang': u'en', u'#text': u'Error mask'}], u'offset': u'52'}
+{u'source': u'0x7113', u'destination': u'0x0010', u'command': u'0x0100', u'field': [{u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 1 Sensor 1', {u'-lang': u'en', u'#text': u'Temperature module 1 sensor 1'}], u'unit': u' \xb0C', u'offset': u'0'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 1 Sensor 2', {u'-lang': u'en', u'#text': u'Temperature module 1 sensor 2'}], u'unit': u' \xb0C', u'offset': u'2'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 1 Sensor 3', {u'-lang': u'en', u'#text': u'Temperature module 1 sensor 3'}], u'unit': u' \xb0C', u'offset': u'4'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 1 Sensor 4', {u'-lang': u'en', u'#text': u'Temperature module 1 sensor 4'}], u'unit': u' \xb0C', u'offset': u'6'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 1 Sensor 5', {u'-lang': u'en', u'#text': u'Temperature module 1 sensor 5'}], u'unit': u' \xb0C', u'offset': u'8'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 1 Sensor 6', {u'-lang': u'en', u'#text': u'Temperature module 1 sensor 6'}], u'unit': u' \xb0C', u'offset': u'10'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 2 Sensor 1', {u'-lang': u'en', u'#text': u'Temperature module 2 sensor 1'}], u'unit': u' \xb0C', u'offset': u'12'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 2 Sensor 2', {u'-lang': u'en', u'#text': u'Temperature module 2 sensor 2'}], u'unit': u' \xb0C', u'offset': u'14'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 2 Sensor 3', {u'-lang': u'en', u'#text': u'Temperature module 2 sensor 3'}], u'unit': u' \xb0C', u'offset': u'16'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 2 Sensor 4', {u'-lang': u'en', u'#text': u'Temperature module 2 sensor 4'}], u'unit': u' \xb0C', u'offset': u'18'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 2 Sensor 5', {u'-lang': u'en', u'#text': u'Temperature module 2 sensor 5'}], u'unit': u' \xb0C', u'offset': u'20'}, {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 2 Sensor 6', {u'-lang': u'en', u'#text': u'Temperature module 2 sensor 6'}], u'unit': u' \xb0C', u'offset': u'22'}]}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 1 Sensor 1', {u'-lang': u'en', u'#text': u'Temperature module 1 sensor 1'}], u'unit': u' \xb0C', u'offset': u'0'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 1 Sensor 2', {u'-lang': u'en', u'#text': u'Temperature module 1 sensor 2'}], u'unit': u' \xb0C', u'offset': u'2'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 1 Sensor 3', {u'-lang': u'en', u'#text': u'Temperature module 1 sensor 3'}], u'unit': u' \xb0C', u'offset': u'4'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 1 Sensor 4', {u'-lang': u'en', u'#text': u'Temperature module 1 sensor 4'}], u'unit': u' \xb0C', u'offset': u'6'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 1 Sensor 5', {u'-lang': u'en', u'#text': u'Temperature module 1 sensor 5'}], u'unit': u' \xb0C', u'offset': u'8'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 1 Sensor 6', {u'-lang': u'en', u'#text': u'Temperature module 1 sensor 6'}], u'unit': u' \xb0C', u'offset': u'10'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 2 Sensor 1', {u'-lang': u'en', u'#text': u'Temperature module 2 sensor 1'}], u'unit': u' \xb0C', u'offset': u'12'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 2 Sensor 2', {u'-lang': u'en', u'#text': u'Temperature module 2 sensor 2'}], u'unit': u' \xb0C', u'offset': u'14'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 2 Sensor 3', {u'-lang': u'en', u'#text': u'Temperature module 2 sensor 3'}], u'unit': u' \xb0C', u'offset': u'16'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 2 Sensor 4', {u'-lang': u'en', u'#text': u'Temperature module 2 sensor 4'}], u'unit': u' \xb0C', u'offset': u'18'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 2 Sensor 5', {u'-lang': u'en', u'#text': u'Temperature module 2 sensor 5'}], u'unit': u' \xb0C', u'offset': u'20'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': [u'Temperatur Modul 2 Sensor 6', {u'-lang': u'en', u'#text': u'Temperature module 2 sensor 6'}], u'unit': u' \xb0C', u'offset': u'22'}
+{u'source': u'0x7121', u'destination': u'0x0010', u'command': u'0x0100', u'field': [{u'bitSize': u'15', u'factor': u'0.1', u'name': u'Vorlauf-Soll-Temperatur', u'unit': u' \xb0C', u'offset': u'0'}, {u'bitSize': u'8', u'name': u'Betriebsstatus', u'offset': u'2'}], u'sourceMask': u'0xFFF0'}
+  {u'bitSize': u'15', u'factor': u'0.1', u'name': u'Vorlauf-Soll-Temperatur', u'unit': u' \xb0C', u'offset': u'0'}
+  {u'bitSize': u'8', u'name': u'Betriebsstatus', u'offset': u'2'}
+{u'source': u'0x7131', u'destination': u'0x0010', u'command': u'0x0100', u'field': [{u'bitSize': u'31', u'factor': u'1', u'name': u'W\xe4rmemenge', u'unit': u' Wh', u'offset': u'0'}, {u'bitSize': u'31', u'factor': u'1', u'name': u'W\xe4rmemenge heute', u'unit': u' Wh', u'offset': u'8'}, {u'bitSize': u'31', u'factor': u'1', u'name': u'W\xe4rmemenge Woche', u'unit': u' Wh', u'offset': u'12'}], u'sourceMask': u'0xFFF0'}
+  {u'bitSize': u'31', u'factor': u'1', u'name': u'W\xe4rmemenge', u'unit': u' Wh', u'offset': u'0'}
+  {u'bitSize': u'31', u'factor': u'1', u'name': u'W\xe4rmemenge heute', u'unit': u' Wh', u'offset': u'8'}
+  {u'bitSize': u'31', u'factor': u'1', u'name': u'W\xe4rmemenge Woche', u'unit': u' Wh', u'offset': u'12'}
+3 Messages, 0 Resultlen
+PV2
+PARSED: 
+    ZIEL1......: 0x00
+    ZIEL2......: 0x00
+    QUELLE1....: 0x7b
+    QUELLE2....: 0x42
+    PROTOKOLL..: 0x20
+    BEFEHL1....: 0x00
+    BEFEHL2....: 0x05
+    ID1........: 0x00
+    ID2........: 0x00
+    WERT1......: 0x00
+    WERT2......: 0x00
+    WERT3......: 0x00
+    WERT4......: 0x00
+    SEPTETT....: 0x00
+    CHECKSUM...: 0x1d
+
+PV1
+PARSED: 
+    ZIEL.......: 0x0010
+    QUELLE.....: 0x427b 
+    PROTOKOLL..: PV1
+    BEFEHL.....: 0x0100
+    ANZ_FRAMES.: 9
+    CHECKSUM...: 0x18
+    NB1........: 0x41 - 0xc1
+    NB2........: 0x01 - 0x01
+    NB3........: 0x1c - 0x9c
+    NB4........: 0x01 - 0x01
+    SEPTETT1...: 0x05
+    CHECKSUM1..: 0x1b
+    NB5........: 0x38 - 0xb8
+    NB6........: 0x22 - 0x22
+    NB7........: 0x38 - 0xb8
+    NB8........: 0x22 - 0x22
+    SEPTETT2...: 0x05
+    CHECKSUM2..: 0x46
+    NB9........: 0x00 - 0x00
+    NB10.......: 0x7f - 0xff
+    NB11.......: 0x25 - 0x25
+    NB12.......: 0x00 - 0x00
+    SEPTETT3...: 0x02
+    CHECKSUM3..: 0x59
+    NB13.......: 0x00 - 0x00
+    NB14.......: 0x7f - 0xff
+    NB15.......: 0x00 - 0x00
+    NB16.......: 0x00 - 0x00
+    SEPTETT4...: 0x02
+    CHECKSUM4..: 0x7e
+    NB17.......: 0x0b - 0x0b
+    NB18.......: 0x01 - 0x01
+    NB19.......: 0x7f - 0xff
+    NB20.......: 0x7f - 0xff
+    SEPTETT5...: 0x0c
+    CHECKSUM5..: 0x69
+    NB21.......: 0x00 - 0x00
+    NB22.......: 0x00 - 0x00
+    NB23.......: 0x63 - 0xe3
+    NB24.......: 0x02 - 0x02
+    SEPTETT6...: 0x04
+    CHECKSUM6..: 0x16
+    NB25.......: 0x00 - 0x00
+    NB26.......: 0x00 - 0x00
+    NB27.......: 0x00 - 0x00
+    NB28.......: 0x00 - 0x00
+    SEPTETT7...: 0x00
+    CHECKSUM7..: 0x7f
+    NB29.......: 0x00 - 0x00
+    NB30.......: 0x00 - 0x00
+    NB31.......: 0x00 - 0x00
+    NB32.......: 0x00 - 0x00
+    SEPTETT8...: 0x00
+    CHECKSUM8..: 0x7f
+    NB33.......: 0x68 - 0x68
+    NB34.......: 0x00 - 0x00
+    NB35.......: 0x00 - 0x00
+    NB36.......: 0x00 - 0x00
+    SEPTETT9...: 0x00
+    CHECKSUM9..: 0x17
+    PAYLOAD....: 0xc1 0x01 0x9c 0x01 0xb8 0x22 0xb8 0x22 0x00 0xff 0x25 0x00 0x00 0xff 0x00 0x00 0x0b 0x01 0xff 0xff 0x00 0x00 0xe3 0x02 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x68 0x00 0x00 0x00
+
+PV1
+PARSED: 
+    ZIEL.......: 0x0015
+    QUELLE.....: 0x427b 
+    PROTOKOLL..: PV1
+    BEFEHL.....: 0x0100
+    ANZ_FRAMES.: 10
+    CHECKSUM...: 0x12
+    NB1........: 0x01 - 0x01
+    NB2........: 0x08 - 0x08
+    NB3........: 0x00 - 0x00
+    NB4........: 0x00 - 0x00
+    SEPTETT1...: 0x00
+    CHECKSUM1..: 0x76
+    NB5........: 0x00 - 0x00
+    NB6........: 0x00 - 0x00
+    NB7........: 0x7f - 0xff
+    NB8........: 0x7f - 0xff
+    SEPTETT2...: 0x0c
+    CHECKSUM2..: 0x75
+    NB9........: 0x02 - 0x02
+    NB10.......: 0x0a - 0x0a
+    NB11.......: 0x00 - 0x00
+    NB12.......: 0x00 - 0x00
+    SEPTETT3...: 0x00
+    CHECKSUM3..: 0x73
+    NB13.......: 0x41 - 0xc1
+    NB14.......: 0x01 - 0x01
+    NB15.......: 0x1c - 0x9c
+    NB16.......: 0x01 - 0x01
+    SEPTETT4...: 0x05
+    CHECKSUM4..: 0x1b
+    NB17.......: 0x00 - 0x00
+    NB18.......: 0x00 - 0x00
+    NB19.......: 0x00 - 0x00
+    NB20.......: 0x00 - 0x00
+    SEPTETT5...: 0x00
+    CHECKSUM5..: 0x7f
+    NB21.......: 0x01 - 0x01
+    NB22.......: 0x0b - 0x0b
+    NB23.......: 0x00 - 0x00
+    NB24.......: 0x00 - 0x00
+    SEPTETT6...: 0x00
+    CHECKSUM6..: 0x73
+    NB25.......: 0x00 - 0x00
+    NB26.......: 0x00 - 0x00
+    NB27.......: 0x00 - 0x00
+    NB28.......: 0x00 - 0x00
+    SEPTETT7...: 0x00
+    CHECKSUM7..: 0x7f
+    NB29.......: 0x02 - 0x02
+    NB30.......: 0x01 - 0x01
+    NB31.......: 0x00 - 0x00
+    NB32.......: 0x0b - 0x0b
+    SEPTETT8...: 0x00
+    CHECKSUM8..: 0x71
+    NB33.......: 0x40 - 0xc0
+    NB34.......: 0x01 - 0x01
+    NB35.......: 0x1c - 0x9c
+    NB36.......: 0x01 - 0x01
+    SEPTETT9...: 0x05
+    CHECKSUM9..: 0x1c
+    NB37.......: 0x38 - 0xb8
+    NB38.......: 0x22 - 0x22
+    NB39.......: 0x38 - 0xb8
+    NB40.......: 0x22 - 0x22
+    SEPTETT10..: 0x05
+    CHECKSUM10.: 0x46
+    PAYLOAD....: 0x01 0x08 0x00 0x00 0x00 0x00 0xff 0xff 0x02 0x0a 0x00 0x00 0xc1 0x01 0x9c 0x01 0x00 0x00 0x00 0x00 0x01 0x0b 0x00 0x00 0x00 0x00 0x00 0x00 0x02 0x01 0x00 0x0b 0xc0 0x01 0x9c 0x01 0xb8 0x22 0xb8 0x22
+
