@@ -1,0 +1,243 @@
+{
+  "vbusSpecification": {
+    "device": [
+	  {
+        "address": "0x4221",
+        "mask": "0xFFFF",
+        "name": "DeltaSol BS Plus",
+        "isMaster": "true"
+      }
+    ],
+    "packet": [
+	  {
+	  "destination": "0x0010",
+      "source": "0x4221",
+      "command": "0x0100",
+      "field": [
+        {
+          "offset": "0",
+          "name": [
+            "Temperatur Sensor 1",
+            {
+              "-lang": "en",
+              "#text": "Temperature sensor 1"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "0.1",
+          "unit": " °C"
+        },
+        {
+          "offset": "2",
+          "name": [
+            "Temperatur Sensor 2",
+            {
+              "-lang": "en",
+              "#text": "Temperature sensor 2"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "0.1",
+          "unit": " °C"
+        },
+        {
+          "offset": "4",
+          "name": [
+            "Temperatur Sensor 3",
+            {
+              "-lang": "en",
+              "#text": "Temperature sensor 3"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "0.1",
+          "unit": " °C"
+        },
+        {
+          "offset": "6",
+          "name": [
+            "Temperatur Sensor 4",
+            {
+              "-lang": "en",
+              "#text": "Temperature sensor 4"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "0.1",
+          "unit": " °C"
+        },
+        {
+          "offset": "8",
+          "name": [
+            "Drehzahl Pumpe 1",
+            {
+              "-lang": "en",
+              "#text": "Pump speed 1"
+            }
+          ],
+          "bitSize": "7",
+          "unit": " %"
+        },
+        {
+          "offset": "9",
+          "name": [
+            "Drehzahl Pumpe 2",
+            {
+              "-lang": "en",
+              "#text": "Pump speed 2"
+            }
+          ],
+          "bitSize": "7",
+          "unit": " %"
+        },
+        {
+          "offset": "10",
+          "name": [
+            "Relaismaske",
+            {
+              "-lang": "en",
+              "#text": "Relais mask"
+            }
+          ],
+          "bitSize": "8"
+        },
+        {
+          "offset": "11",
+          "name": [
+            "Fehlermaske",
+            {
+              "-lang": "en",
+              "#text": "Error mask"
+            }
+          ],
+          "bitSize": "8"
+        },
+        {
+          "offset": "12",
+          "name": [
+            "Systemzeit",
+            {
+              "-lang": "en",
+              "#text": "System time"
+            }
+          ],
+          "bitSize": "16",
+          "format": "t",
+          "timeRef": "1"
+        },
+        {
+          "offset": "14",
+          "name": [
+            "Schema",
+            {
+              "-lang": "en",
+              "#text": "System"
+            }
+          ],
+          "bitSize": "8",
+          "factor": "1"
+        },
+        {
+          "offset": "15",
+          "name": "Option Kollektor Max.",
+          "bitSize": "1",
+          "bitPos": "0"
+        },
+        {
+          "offset": "15",
+          "name": "Option Kollektor Min.",
+          "bitSize": "1",
+          "bitPos": "1"
+        },
+        {
+          "offset": "15",
+          "name": "Option Kollektor Frost",
+          "bitSize": "1",
+          "bitPos": "2"
+        },
+        {
+          "offset": "15",
+          "name": "Option Röhrenkollektor",
+          "bitSize": "1",
+          "bitPos": "3"
+        },
+        {
+          "offset": "15",
+          "name": "Option Rückkühlung",
+          "bitSize": "1",
+          "bitPos": "4"
+        },
+        {
+          "offset": "15",
+          "name": "Option WMZ",
+          "bitSize": "1",
+          "bitPos": "5"
+        },
+        {
+          "offset": "16",
+          "name": [
+            "Betriebsstunden Relais 1",
+            {
+              "-lang": "en",
+              "#text": "Operating hours relais 1"
+            }
+          ],
+          "bitSize": "16",
+          "factor": "1"
+        },
+        {
+          "offset": "18",
+          "name": [
+            "Betriebsstunden Relais 2",
+            {
+              "-lang": "en",
+              "#text": "Operating hours relais 2"
+            }
+          ],
+          "bitSize": "16",
+          "factor": "1"
+        },
+        {
+          "name": [
+            "Wärmemenge",
+            {
+              "-lang": "en",
+              "#text": "Heat amount"
+            }
+          ],
+          "unit": " Wh",
+          "field": [
+            {
+              "offset": "20",
+              "bitSize": "16",
+              "factor": "1"
+            },
+            {
+              "offset": "22",
+              "bitSize": "16",
+              "factor": "1000"
+            },
+            {
+              "offset": "24",
+              "bitSize": "16",
+              "factor": "1000000"
+            }
+          ]
+        },
+        {
+          "offset": "26",
+          "name": [
+            "Version",
+            {
+              "-lang": "en",
+              "#text": "Version"
+            }
+          ],
+          "bitSize": "16",
+          "factor": "0.01"
+        }
+      ]
+      }
+	]
+  }
+}

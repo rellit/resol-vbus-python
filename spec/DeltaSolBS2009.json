@@ -1,0 +1,199 @@
+{
+  "vbusSpecification": {
+    "device": [
+	  {
+        "address": "0x427B",
+        "mask": "0xFFFF",
+        "name": "DeltaSol BS 2009",
+        "isMaster": "true"
+      }
+	],
+    "packet": [
+	  {
+      "destination": "0x0010",
+      "source": "0x427B",
+      "command": "0x0100",
+      "field": [
+        {
+          "offset": "0",
+          "name": [
+            "Temperatur Sensor 1",
+            {
+              "-lang": "en",
+              "#text": "Temperature sensor 1"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "0.1",
+          "unit": " °C"
+        },
+        {
+          "offset": "2",
+          "name": [
+            "Temperatur Sensor 2",
+            {
+              "-lang": "en",
+              "#text": "Temperature sensor 2"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "0.1",
+          "unit": " °C"
+        },
+        {
+          "offset": "4",
+          "name": [
+            "Temperatur Sensor 3",
+            {
+              "-lang": "en",
+              "#text": "Temperature sensor 3"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "0.1",
+          "unit": " °C"
+        },
+        {
+          "offset": "6",
+          "name": [
+            "Temperatur Sensor 4",
+            {
+              "-lang": "en",
+              "#text": "Temperature sensor 4"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "0.1",
+          "unit": " °C"
+        },
+        {
+          "offset": "8",
+          "name": [
+            "Drehzahl Relais 1",
+            {
+              "-lang": "en",
+              "#text": "Pump speed 1"
+            }
+          ],
+          "bitSize": "8",
+          "unit": " %"
+        },
+        {
+          "offset": "12",
+          "name": [
+            "Drehzahl Relais 2",
+            {
+              "-lang": "en",
+              "#text": "Pump speed 2"
+            }
+          ],
+          "bitSize": "8",
+          "unit": " %"
+        },
+        {
+          "offset": "10",
+          "name": [
+            "Betriebsstunden Relais 1",
+            {
+              "-lang": "en",
+              "#text": "Operating hours relais 1"
+            }
+          ],
+          "bitSize": "16",
+          "factor": "1",
+          "unit": " h"
+        },
+        {
+          "offset": "14",
+          "name": [
+            "Betriebsstunden Relais 2",
+            {
+              "-lang": "en",
+              "#text": "Operating hours relais 2"
+            }
+          ],
+          "bitSize": "16",
+          "factor": "1",
+          "unit": " h"
+        },
+        {
+          "offset": "16",
+          "name": "UnitType",
+          "factor": "1",
+          "bitSize": "8"
+        },
+        {
+          "offset": "17",
+          "name": "System",
+          "bitSize": "8"
+        },
+        {
+          "offset": "20",
+          "name": "ErrorMask",
+          "bitSize": "16"
+        },
+        {
+          "offset": "22",
+          "name": "Systemzeit",
+          "bitSize": "15",
+          "format": "t",
+          "timeRef": "1"
+        },
+        {
+          "offset": "20",
+          "name": "Sensor 1 defekt",
+          "bitSize": "1",
+          "bitPos": "0"
+        },
+        {
+          "offset": "20",
+          "name": "Sensor 2 defekt",
+          "bitSize": "1",
+          "bitPos": "1"
+        },
+        {
+          "offset": "20",
+          "name": "Sensor 3 defekt",
+          "bitSize": "1",
+          "bitPos": "2"
+        },
+        {
+          "offset": "20",
+          "name": "Sensor 4 defekt",
+          "bitSize": "1",
+          "bitPos": "3"
+        },
+        {
+          "offset": "24",
+          "name": "Statusmask",
+          "bitSize": "32"
+        },
+        {
+          "name": [
+            "Wärmemenge",
+            {
+              "-lang": "en",
+              "#text": "Heat amount"
+            }
+          ],
+          "unit": " Wh",
+          "offset": "28",
+          "bitSize": "32",
+          "factor": "1"
+        },
+        {
+          "offset": "32",
+          "name": "SV Version",
+          "bitSize": "16",
+          "factor": "0.01"
+        },
+        {
+          "offset": "34",
+          "name": "Variante",
+          "bitSize": "16"
+        }
+      ]
+      }
+	]
+  }
+}
