@@ -1,7 +1,9 @@
 import os
 
-# configure kind of connection "lan" or "serial"
+# configure kind of connection "lan", "serial" or "stdin"
 connection = "lan"
+#connection = "serial"
+#connection = "stdin"
 
 # only used for "lan"
 address = ("192.168.1.253", 7053)

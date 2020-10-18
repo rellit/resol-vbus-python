@@ -5,7 +5,6 @@
 #
 
 import socket
-import serial
 import sys
 import json
 
@@ -14,6 +13,10 @@ try:
     import config
 except:
     sys.exit("config.py not found!")
+
+if config.connection == "serial":
+    # import serial (pyserial) only if it's configured to not force installing it without needing
+    import serial
 
 # Load Message specification
 try:
@@ -40,7 +43,7 @@ def login():
 
 
 def load_data():
-    if config.connection != "serial":
+    if config.connection == "lan":
         #Request Data
         send("DATA\n")
 
@@ -68,7 +71,7 @@ def load_data():
 
 # Receive 1024 bytes from stream
 def recv():
-    if config.connection == "serial":
+    if config.connection == "serial" or config.connection == "stdin":
         # timeout needs to be set to 0 (see init), or it will
         # block until the requested number of bytes is read
         dat = sock.read(1024)
@@ -234,17 +237,21 @@ def gb(data, begin, end):  # GetBytes
 if __name__ == '__main__':
     if config.connection == "serial":
         sock = serial.Serial(config.port, baudrate=config.baudrate, timeout=0)
-    else:
+    elif config.connection == "lan":
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.connect(config.address)
         login()
+    elif config.connection == "stdin":
+        sock = sys.stdin
+    else:
+        sys.exit('Unknown connection type. Please check config.')
 
     result = dict()
     load_data()
 
     print(json.dumps(result))
 
-    if config.connection != "serial":
+    if config.connection == "lan":
         try:
             sock.shutdown(0)
         except:
