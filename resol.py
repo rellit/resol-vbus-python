@@ -1,11 +1,10 @@
 #!/usr/bin/env python2
 
-# 
-# Talk with Resol VBUS over LAN
+#
+# Talk with Resol VBUS over LAN or serial UART
 #
 
 import socket
-import time
 import sys
 import json
 
@@ -14,6 +13,10 @@ try:
     import config
 except:
     sys.exit("config.py not found!")
+
+if config.connection == "serial":
+    # import serial (pyserial) only if it's configured to not force installing it without needing
+    import serial
 
 # Load Message specification
 try:
@@ -40,23 +43,23 @@ def login():
 
 
 def load_data():
-    
-    #Request Data
-    send("DATA\n")
+    if config.connection == "lan":
+        #Request Data
+        send("DATA\n")
 
-    dat = recv()
+        dat = recv()
 
-    #Check if device is ready to send Data
-    if not dat.startswith("+OK"):
-        return
+        #Check if device is ready to send Data
+        if not dat.startswith("+OK"):
+            return
 
     while len(result) < config.expected_packets:
         buf = readstream()
         msgs = splitmsg(buf)
         if config.debug:
-          print(str(len(msgs))+" Messages, "+str(len(result))+" Resultlen")
+            print(str(len(msgs))+" Messages, "+str(len(result))+" Resultlen")
         for msg in msgs:
-			#print(get_protocolversion(msg))
+            if config.debug: print(get_protocolversion(msg))
             if "PV1" == get_protocolversion(msg):
                 if config.debug:
                     print(format_message_pv1(msg))
@@ -65,18 +68,29 @@ def load_data():
                 if config.debug:
                     print(format_message_pv2(msg))
 
+
 # Receive 1024 bytes from stream
 def recv():
-    dat = sock.recv(1024)
+    if config.connection == "serial" or config.connection == "stdin":
+        # timeout needs to be set to 0 (see init), or it will
+        # block until the requested number of bytes is read
+        dat = sock.read(1024)
+    else:
+        dat = sock.recv(1024)
     return dat
 
 
-# Sends given bytes over the stram. Adds debug
+# Sends given bytes over the stream. Adds debug
 def send(dat):
     sock.send(dat)
 
 
-# Read Data until minimum 1 message is received
+# Read data until minimum 1 message is received
+# We cyclic get:
+# '0xaa' '0x00' '0x00' '0x21' '0x74' '0x20' ...
+# '0xaa' '0x15' '0x00' '0x21' '0x74' '0x10' ...
+# '0xaa' '0x10' '0x00' '0x21' '0x74' '0x10' ...
+# Only the last one is needed, so we need 4 times '0xaa'!
 def readstream():
     data = recv()
     while data.count(chr(0xAA)) < 4:
@@ -161,7 +175,6 @@ def format_message_pv1(msg):
         parsed += ("    SEPTETT"+str(i+1)).ljust(15,'.')+": " + format_byte(msg[13+(i*6)]) + "\n"
         parsed += ("    CHECKSUM"+str(i+1)).ljust(15,'.')+": " + format_byte(msg[14+(i*6)]) + "\n"
     parsed += "    PAYLOAD".ljust(15,'.')+": " + (" ".join(format_byte(b) for b in get_payload(msg)))+"\n"
-
     return parsed
 
 
@@ -182,7 +195,6 @@ def format_message_pv2(msg):
     parsed += "    WERT4".ljust(15,'.')+": " + format_byte(msg[12:13]) + "\n"
     parsed += "    SEPTETT".ljust(15,'.')+": " + format_byte(msg[13:14]) + "\n"
     parsed += "    CHECKSUM".ljust(15,'.')+": " + format_byte(msg[14:15]) + "\n"
-
     return parsed
 
 
@@ -210,39 +222,39 @@ def integrate_septett(frame):
             data += chr(ord(frame[j]) | 0x80)
         else:
             data += frame[j]
-
     return data
 
-    
+
 # Gets the numerical value of a set of bytes (respect Two's complement by value Range)
 def gb(data, begin, end):  # GetBytes
     wbg = sum([0xff << (i * 8) for i, b in enumerate(data[begin:end])])
     s = sum([ord(b) << (i * 8) for i, b in enumerate(data[begin:end])])
-    
-    
     if s >= wbg/2:
         s = -1 * (wbg - s)
     return s
-    
+
 
 if __name__ == '__main__':
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-    sock.connect(config.address)
+    if config.connection == "serial":
+        sock = serial.Serial(config.port, baudrate=config.baudrate, timeout=0)
+    elif config.connection == "lan":
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.connect(config.address)
+        login()
+    elif config.connection == "stdin":
+        sock = sys.stdin
+    else:
+        sys.exit('Unknown connection type. Please check config.')
 
     result = dict()
-
-    login()
-
     load_data()
 
     print(json.dumps(result))
 
-    try:
-        sock.shutdown(0)
-    except:
-        pass
+    if config.connection == "lan":
+        try:
+            sock.shutdown(0)
+        except:
+            pass
     sock.close()
     sock = None
-
-
