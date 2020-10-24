@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 #
 # Talk with Resol VBUS over LAN or serial UART
@@ -7,6 +7,7 @@
 import socket
 import sys
 import json
+from decimal import *
 
 # Load settings
 try:
@@ -61,22 +62,23 @@ def load_data():
         for msg in msgs:
             if config.debug: print(get_protocolversion(msg))
             if "PV1" == get_protocolversion(msg):
-                if config.debug:
-                    print(format_message_pv1(msg))
+                if config.debug: print(format_message_pv1(msg))
                 parse_payload(msg)
             elif "PV2" == get_protocolversion(msg):
-                if config.debug:
-                    print(format_message_pv2(msg))
-
+                if config.debug: print(format_message_pv2(msg))
 
 # Receive 1024 bytes from stream
 def recv():
-    if config.connection == "serial" or config.connection == "stdin":
+    if config.connection == "serial":
         # timeout needs to be set to 0 (see init), or it will
         # block until the requested number of bytes is read
         dat = sock.read(1024)
-    else:
+    elif config.connection == "lan":
         dat = sock.recv(1024)
+    elif config.connection == "stdin":
+        dat = sock.buffer.read(1024)
+    else:
+        sys.exit('Unknown connection type. Please check config.')
     return dat
 
 
@@ -92,27 +94,28 @@ def send(dat):
 # '0xaa' '0x10' '0x00' '0x21' '0x74' '0x10' ...
 # Only the last one is needed, so we need 4 times '0xaa'!
 def readstream():
-    data = recv()
-    while data.count(chr(0xAA)) < 4:
-        data += recv()
+    data = bytearray(b'')
+    data.extend(recv())
+    while data.count(0xAA) < 4:
+        data.extend(recv())
     return data
 
 
 #Split Messages on Sync Byte
 def splitmsg(buf):
-    return buf.split(chr(0xAA))[1:-1]
+    return buf.split(b'\xAA')[1:-1]
 
 
-# Format 1 byte as String
+# Format 1 byte as String Hex string
 def format_byte(byte):
-    return hex(ord(byte))[0:2] + '0' + hex(ord(byte))[2:] if len(hex(ord(byte))) < 4 else hex(ord(byte))
+    return '0x' + ('0' if byte < 0x10 else '') + format(byte, 'x')
 
 
 # Extract protocol Version from msg
 def get_protocolversion(msg):
-    if hex(ord(msg[4])) == '0x10': return "PV1"
-    if hex(ord(msg[4])) == '0x20': return "PV2"
-    if hex(ord(msg[4])) == '0x30': return "PV3"
+    if msg[4] == 0x10: return "PV1"
+    if msg[4] == 0x20: return "PV2"
+    if msg[4] == 0x30: return "PV3"
     return "UNKNOWN"
 
 
@@ -128,7 +131,7 @@ def get_source(msg):
 
 # Extract command from msg
 def get_command(msg):
-    return format_byte(msg[6]) + format_byte(msg[5:6])[2:]
+    return format_byte(msg[6]) + format_byte(msg[5])[2:]
 
 
 # Get count of frames in msg
@@ -138,9 +141,9 @@ def get_frame_count(msg):
 
 # Extract payload from msg
 def get_payload(msg):
-    payload = ''
+    payload = bytearray(b'')
     for i in range(get_frame_count(msg)):
-        payload += integrate_septett(msg[9+(i*6):15+(i*6)])
+        payload.extend(integrate_septett(msg[9+(i*6):15+(i*6)]))
     return payload
 
 
@@ -152,10 +155,15 @@ def parse_payload(msg):
          print('ParsePacket Payload '+str(len(payload)))
 
     for packet in spec.spec['packet']:
-        if packet['source'].lower() == get_source(msg).lower() and packet['destination'].lower() == get_destination(msg).lower() and packet['command'].lower() == get_command(msg).lower():
+        if packet['source'].lower() == get_source(msg).lower() and \
+                packet['destination'].lower() == get_destination(msg).lower() and \
+                packet['command'].lower() == get_command(msg).lower():
             result[get_source_name(msg)] = {}
             for field in packet['field']:
-                result[get_source_name(msg)][field['name'][0]] = str(gb(payload, int(field['offset']), int(field['offset'])+((int(field['bitSize'])+1) / 8)) * (float(field['factor']) if field.has_key('factor') else 1)) + (field['unit'] if 'unit' in field else '')
+                result[get_source_name(msg)][field['name'][0]] = str(
+                    gb(payload, field['offset'], int(field['offset'])+((int(field['bitSize'])+1) / 8)) *
+                    (Decimal(field['factor']) if 'factor' in field else 1)) + \
+                    (field['unit'] if 'unit' in field else '')
 
 
 def format_message_pv1(msg):
@@ -180,21 +188,21 @@ def format_message_pv1(msg):
 
 def format_message_pv2(msg):
     parsed = "PARSED: \n"
-    parsed += "    ZIEL1".ljust(15,'.')+": " + format_byte(msg[0:1]) + "\n"
-    parsed += "    ZIEL2".ljust(15,'.')+": " + format_byte(msg[1:2]) + "\n"
-    parsed += "    QUELLE1".ljust(15,'.')+": " + format_byte(msg[2:3]) + "\n"
-    parsed += "    QUELLE2".ljust(15,'.')+": " + format_byte(msg[3:4]) + "\n"
-    parsed += "    PROTOKOLL".ljust(15,'.')+": " + format_byte(msg[4:5]) + "\n"
-    parsed += "    BEFEHL1".ljust(15,'.')+": " + format_byte(msg[5:6]) + "\n"
-    parsed += "    BEFEHL2".ljust(15,'.')+": " + format_byte(msg[6:7]) + "\n"
-    parsed += "    ID1".ljust(15,'.')+": " + format_byte(msg[7:8]) + "\n"
-    parsed += "    ID2".ljust(15,'.')+": " + format_byte(msg[8:9]) + "\n"
-    parsed += "    WERT1".ljust(15,'.')+": " + format_byte(msg[9:10]) + "\n"
-    parsed += "    WERT2".ljust(15,'.')+": " + format_byte(msg[10:11]) + "\n"
-    parsed += "    WERT3".ljust(15,'.')+": " + format_byte(msg[11:12]) + "\n"
-    parsed += "    WERT4".ljust(15,'.')+": " + format_byte(msg[12:13]) + "\n"
-    parsed += "    SEPTETT".ljust(15,'.')+": " + format_byte(msg[13:14]) + "\n"
-    parsed += "    CHECKSUM".ljust(15,'.')+": " + format_byte(msg[14:15]) + "\n"
+    parsed += "    ZIEL1".ljust(15,'.')+": " + format_byte(msg[0]) + "\n"
+    parsed += "    ZIEL2".ljust(15,'.')+": " + format_byte(msg[1]) + "\n"
+    parsed += "    QUELLE1".ljust(15,'.')+": " + format_byte(msg[2]) + "\n"
+    parsed += "    QUELLE2".ljust(15,'.')+": " + format_byte(msg[3]) + "\n"
+    parsed += "    PROTOKOLL".ljust(15,'.')+": " + format_byte(msg[4]) + "\n"
+    parsed += "    BEFEHL1".ljust(15,'.')+": " + format_byte(msg[5]) + "\n"
+    parsed += "    BEFEHL2".ljust(15,'.')+": " + format_byte(msg[6]) + "\n"
+    parsed += "    ID1".ljust(15,'.')+": " + format_byte(msg[7]) + "\n"
+    parsed += "    ID2".ljust(15,'.')+": " + format_byte(msg[8]) + "\n"
+    parsed += "    WERT1".ljust(15,'.')+": " + format_byte(msg[9]) + "\n"
+    parsed += "    WERT2".ljust(15,'.')+": " + format_byte(msg[10]) + "\n"
+    parsed += "    WERT3".ljust(15,'.')+": " + format_byte(msg[11]) + "\n"
+    parsed += "    WERT4".ljust(15,'.')+": " + format_byte(msg[12]) + "\n"
+    parsed += "    SEPTETT".ljust(15,'.')+": " + format_byte(msg[13]) + "\n"
+    parsed += "    CHECKSUM".ljust(15,'.')+": " + format_byte(msg[14]) + "\n"
     return parsed
 
 
@@ -214,21 +222,24 @@ def get_source_name(msg):
 
 
 def integrate_septett(frame):
-    data = ''
-    septet = ord(frame[4])
+    data = bytearray(b'')
+    septet = frame[4]
 
     for j in range(4):
         if septet & (1 << j):
-            data += chr(ord(frame[j]) | 0x80)
+            data.append(frame[j] | 0x80)
         else:
-            data += frame[j]
+            data.append(frame[j])
     return data
 
 
 # Gets the numerical value of a set of bytes (respect Two's complement by value Range)
 def gb(data, begin, end):  # GetBytes
+    # convert begin and end to int whatever was passed to make enumerate work
+    begin = int(begin)
+    end = int(end)
     wbg = sum([0xff << (i * 8) for i, b in enumerate(data[begin:end])])
-    s = sum([ord(b) << (i * 8) for i, b in enumerate(data[begin:end])])
+    s = sum([b << (i * 8) for i, b in enumerate(data[begin:end])])
     if s >= wbg/2:
         s = -1 * (wbg - s)
     return s
