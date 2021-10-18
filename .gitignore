@@ -53,6 +53,9 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+# macOS files
+.DS_Store
+
 =======
 *.py[cod]
 .idea

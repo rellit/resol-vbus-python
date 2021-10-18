@@ -1,0 +1,497 @@
+{
+  "vbusSpecification": {
+    "device": [
+      {
+        "address": "0x1050",
+        "mask": "0xFFFF",
+        "name": "DeltaSol E V2 [Regler]",
+        "isMaster": "true"
+      },
+      {
+        "address": "0x1051",
+        "mask": "0xFFFF",
+        "name": "DeltaSol E V2 [WMZ]",
+        "isMaster": "false"
+      },
+      {
+        "address": "0x1040",
+        "mask": "0xFFF0",
+        "name": "DeltaSol E V2 HK 1 Estrichtrockung [Modul 1]",
+        "isMaster": "false"
+      },
+      {
+        "address": "0x1041",
+        "mask": "0xFFF0",
+        "name": "DeltaSol E V2 HK 2 Estrichtrockung [Modul 2]",
+        "isMaster": "false"
+      },
+      {
+        "address": "0x1042",
+        "mask": "0xFFF0",
+        "name": "DeltaSol E V2 HK 3 Estrichtrockung [Modul 3]",
+        "isMaster": "false"
+      },
+      {
+        "address": "0x1043",
+        "mask": "0xFFF0",
+        "name": "DeltaSol E V2 HK Estrichtrockung [Lokal]",
+        "isMaster": "false"
+      }
+    ],
+    "#comment": " DeltaSol E V2 [Regler] ",
+    "packet": [
+      {
+        "destination": "0x0010",
+        "source": "0x1050",
+        "command": "0x0100",
+        "field": [
+          {
+            "-commonUsage": "'collector1'",
+            "offset": "0",
+            "name": "Temperatur Sensor 1",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "-commonUsage": "'store1'",
+            "offset": "2",
+            "name": "Temperatur Sensor 2",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "4",
+            "name": "Temperatur Sensor 3",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "6",
+            "name": "Temperatur Sensor 4",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "8",
+            "name": "Temperatur Sensor 5",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "10",
+            "name": "Temperatur Sensor 6",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "12",
+            "name": "Temperatur Sensor 7",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "14",
+            "name": "Temperatur Sensor 8",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "16",
+            "name": "Temperatur Sensor 9",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "18",
+            "name": "Temperatur Sensor 10",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "20",
+            "name": "Einstrahlung CS",
+            "bitSize": "15",
+            "factor": "1",
+            "unit": " W/m\\u00b2"
+          },
+          {
+            "offset": "22",
+            "name": "Impulse 1 V40",
+            "bitSize": "16",
+            "factor": "1",
+            "unit": " "
+          },
+          {
+            "offset": "24",
+            "name": "Digital Input",
+            "bitSize": "16",
+            "factor": "1",
+            "unit": " "
+          },
+          {
+            "offset": "68",
+            "name": "PWM 1",
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "26",
+            "name": "Drehzahl Relais 1",
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "69",
+            "name": "PWM 2",
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "27",
+            "name": "Drehzahl Relais 2",
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "70",
+            "name": "PWM 3",
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "28",
+            "name": "Drehzahl Relais 3",
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "29",
+            "name": "Drehzahl Relais 4",
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "30",
+            "name": "Drehzahl Relais 5",
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "31",
+            "name": "Drehzahl Relais 6",
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "32",
+            "name": "Drehzahl Relais 7",
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "-commonUsage": "'error'",
+            "offset": "36",
+            "name": "Fehlermaske",
+            "bitSize": "16"
+          },
+          {
+            "offset": "38",
+            "name": "Meldungen",
+            "bitSize": "16"
+          },
+          {
+            "offset": "40",
+            "name": "System",
+            "bitSize": "7"
+          },
+          {
+            "offset": "42",
+            "name": "Schema",
+            "bitSize": "16"
+          },
+          {
+            "offset": "44",
+            "name": "Vorlauf Soll HK1 Modul Sensor 18",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "46",
+            "name": "Status HK1 Modul",
+            "bitSize": "16"
+          },
+          {
+            "offset": "48",
+            "name": "Vorlauf Soll HK2 Modul Sensor 25",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "50",
+            "name": "Status HK2 Modul",
+            "bitSize": "16"
+          },
+          {
+            "offset": "52",
+            "name": "Vorlauf Soll HK3 Modul Sensor 32",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "54",
+            "name": "Status HK3 Modul",
+            "bitSize": "16"
+          },
+          {
+            "offset": "56",
+            "name": "Vorlauf Soll Heizkreis Sensor 11",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "58",
+            "name": "Status Heizkreis",
+            "bitSize": "16"
+          },
+          {
+            "offset": "62",
+            "name": "Systemzeit",
+            "bitSize": "15",
+            "format": "t",
+            "timeRef": "1"
+          },
+          {
+            "offset": "64",
+            "name": "Jahr",
+            "bitSize": "15",
+            "factor": "1"
+          },
+          {
+            "offset": "66",
+            "name": "Monat",
+            "bitSize": "7",
+            "factor": "1"
+          },
+          {
+            "offset": "67",
+            "name": "Tag",
+            "bitSize": "7",
+            "factor": "1"
+          },
+          {
+            "name": "Version",
+            "field": [
+              {
+                "offset": "60",
+                "bitSize": "7",
+                "factor": "1"
+              },
+              {
+                "offset": "61",
+                "bitSize": "7",
+                "factor": "0,01"
+              }
+            ],
+            "format": "F2"
+          }
+        ]
+      },
+      {
+        "destination": "0x0010",
+        "source": "0x1051",
+        "command": "0x0100",
+        "field": [
+          {
+            "offset": "0",
+            "name": "Temperatur Vorlauf",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "2",
+            "name": "Temperatur R\\u00fccklauf",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "4",
+            "name": "Durchfluss Sensor 8",
+            "bitSize": "15",
+            "unit": " l/h"
+          },
+          {
+            "-commonUsage": "'heat'",
+            "name": "W\\u00e4rmemenge",
+            "unit": " Wh",
+            "field": [
+              {
+                "offset": "6",
+                "bitSize": "16",
+                "factor": "1"
+              },
+              {
+                "offset": "8",
+                "bitSize": "16",
+                "factor": "1000"
+              },
+              {
+                "offset": "10",
+                "bitSize": "16",
+                "factor": "1000000"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "destination": "0x0010",
+        "source": "0x1040",
+        "sourceMask": "0xFFF0",
+        "command": "0x0100",
+        "field": [
+          {
+            "offset": "0",
+            "name": "Jahr",
+            "bitSize": "15",
+            "factor": "1"
+          },
+          {
+            "offset": "2",
+            "name": "Monat",
+            "bitSize": "7",
+            "factor": "1"
+          },
+          {
+            "offset": "3",
+            "name": "Tag",
+            "bitSize": "7",
+            "factor": "1"
+          },
+          {
+            "offset": "4",
+            "name": "Systemzeit",
+            "bitSize": "15",
+            "format": "t",
+            "timeRef": "1"
+          },
+          {
+            "offset": "6",
+            "name": "Status",
+            "bitSize": "7"
+          },
+          {
+            "offset": "7",
+            "name": "Fehlermeldung",
+            "bitSize": "7"
+          },
+          {
+            "offset": "8",
+            "name": "Vorlauf-Soll-Temperatur",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "10",
+            "name": "Vorlauftemperatur",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "12",
+            "name": "Relais Pumpe",
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "13",
+            "name": "Relais Mischer Auf",
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "14",
+            "name": "Relais Mischer Zu",
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "15",
+            "name": "Handebetrieb Relais Pumpe",
+            "bitSize": "7"
+          },
+          {
+            "offset": "16",
+            "name": "Handebetrieb Relais Mischer Auf",
+            "bitSize": "7"
+          },
+          {
+            "offset": "17",
+            "name": "Handebetrieb Relais Mischer Zu",
+            "bitSize": "7"
+          },
+          {
+            "offset": "18",
+            "name": "NH-Anforderung",
+            "bitSize": "7"
+          },
+          {
+            "offset": "19",
+            "name": "Parameter Start",
+            "bitSize": "7"
+          },
+          {
+            "offset": "20",
+            "name": "Parameter TStart",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "22",
+            "name": "Parameter TMax",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "24",
+            "name": "Parameter Anstieg",
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " \\u00b0C"
+          },
+          {
+            "offset": "26",
+            "name": "Parameter Anstiegszeit",
+            "bitSize": "7",
+            "unit": " h"
+          },
+          {
+            "offset": "27",
+            "name": "Parameter Haltezeit",
+            "bitSize": "7",
+            "unit": " d"
+          }
+        ]
+      }
+    ]
+  }
+}
