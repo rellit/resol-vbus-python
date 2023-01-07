@@ -20,6 +20,6 @@ spec_file = os.path.dirname(__file__) + '/spec/DeltaSolBS2009.json'
 expected_packets = 1
 
 # should json data field contain units?
-use_units = False
+use_units = True
 
 debug = False
