@@ -44,4 +44,4 @@ Some config is needed in order to run this script:
 Debug
 -----
 
-If anything wents wrong, xou can enable debug flag in config.py. This will print some basic information while executing the script, but will destroy the JSON output.
+If anything wents wrong, you can enable debug flag in config.py. This will print some basic information while executing the script, but will destroy the JSON output.
