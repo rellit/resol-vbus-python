@@ -13,8 +13,13 @@ vbus_pass = "vbus"
 port = "/dev/ttyAMA0"
 baudrate = 9600
 
+# specify Resol specs file
 spec_file = os.path.dirname(__file__) + '/spec/DeltaSolBS2009.json'
+
 # expected amount of different source packets (see spec_file)
 expected_packets = 1
+
+# should json data field contain units?
+use_units = True
 
 debug = False
