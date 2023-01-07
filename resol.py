@@ -32,30 +32,31 @@ def login():
     dat = recv()
 
     #Check if device answered
-    if dat != "+HELLO\n":
+    if dat.decode('ascii') != "+HELLO\n":
         return False
 
     #Send Password
-    send("PASS %s\n" % config.vbus_pass)
+    send(("PASS %s\n" % config.vbus_pass).encode('ascii'))
 
     dat = recv()
 
-    return dat.startswith("+OK")
+    return dat.startswith("+OK".encode('ascii'))
 
 
 def load_data():
     if config.connection == "lan":
         #Request Data
-        send("DATA\n")
+        send("DATA\n".encode('ascii'))
 
         dat = recv()
 
         #Check if device is ready to send Data
-        if not dat.startswith("+OK"):
+        if not dat.startswith("+OK".encode('ascii')):
             return
 
     while len(result) < config.expected_packets:
         buf = readstream()
+
         msgs = splitmsg(buf)
         if config.debug:
             print(str(len(msgs))+" Messages, "+str(len(result))+" Resultlen")
@@ -163,7 +164,7 @@ def parse_payload(msg):
                 result[get_source_name(msg)][field['name'][0]] = str(
                     gb(payload, field['offset'], int(field['offset'])+((int(field['bitSize'])+1) / 8)) *
                     (Decimal(field['factor']) if 'factor' in field else 1)) + \
-                    (field['unit'] if 'unit' in field else '')
+                    (field['unit'] if 'unit' in field and config.use_units else '')
 
 
 def format_message_pv1(msg):
@@ -260,7 +261,7 @@ if __name__ == '__main__':
     result = dict()
     load_data()
 
-    print(json.dumps(result))
+    print(json.dumps(result).replace("\\u00b0C","°C"))
 
     if config.connection == "lan":
         try:
