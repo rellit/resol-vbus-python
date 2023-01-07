@@ -1,0 +1,1460 @@
+{
+  "vbusSpecification": {
+    "device": [
+      {
+        "address": "0x7341",
+        "mask": "0xFFFF",
+        "name": "SLR_XT",
+        "isMaster": "true"
+      },
+      {
+        "address": "0x7342",
+        "mask": "0xFFFF",
+        "name": "SLR_XT-Erweiterungsmodul_1"
+      },
+      {
+        "address": "0x7343",
+        "mask": "0xFFFF",
+        "name": "SLR_XT-Erweiterungsmodul_2"
+      },
+      {
+        "address": "0x7344",
+        "mask": "0xFFFF",
+        "name": "SLR_XT-Erweiterungsmodul_3"
+      },
+      {
+        "address": "0x7345",
+        "mask": "0xFFFF",
+        "name": "SLR_XT-Erweiterungsmodul_4"
+      },
+      {
+        "address": "0x7346",
+        "mask": "0xFFFF",
+        "name": "SLR_XT-Erweiterungsmodul_5"
+      }
+    ],
+    "packet": [
+      {
+        "destination": "0x0010",
+        "source": "0x7341",
+        "command": "0x0100",
+        "field": [
+          {
+            "offset": "0",
+            "name": [
+                "S1-SF-K",
+                {
+                    "-lang": "de",
+                    "#text": "S1-SF-K"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "2",
+            "name": [
+                "S2-SF-1",
+                {
+                    "-lang": "de",
+                    "#text": "S2-SF-1"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "4",
+            "name": [
+                "S3-SF-2",
+                {
+                    "-lang": "de",
+                    "#text": "S3-SF-2"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "6",
+            "name": [
+                "S4-SF-3/WT/F-RLA1/RLU1",
+                {
+                    "-lang": "de",
+                    "#text": "S4-SF-3/WT/F-RLA1/RLU1"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "8",
+            "name": [
+                "S5-FN-HK/F-RLA2",
+                {
+                    "-lang": "de",
+                    "#text": "S5-FN-HK/F-RLA2"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "10",
+            "name": [
+                "S6-FN-WW/BF/SF-WT",
+                {
+                    "-lang": "de",
+                    "#text": "S6-FN-WW/BF/SF-WT"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "12",
+            "name": [
+                "S7-FN-K2",
+                {
+                    "-lang": "de",
+                    "#text": "S7-FN-K2"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "14",
+            "name": [
+                "S8-FZ",
+                {
+                    "-lang": "de",
+                    "#text": "S8-FZ"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "16",
+            "name": [
+                "S9-AF",
+                {
+                    "-lang": "de",
+                    "#text": "S9-AF"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "18",
+            "name": [
+                "S10-VL-F1",
+                {
+                    "-lang": "de",
+                    "#text": "S10-VL-F1"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "20",
+            "name": [
+                "S11-FV-1",
+                {
+                    "-lang": "de",
+                    "#text": "S11-FV-1"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "22",
+            "name": [
+                "S12-VL-F2/WA-1/SF-4/F-RLU1",
+                {
+                    "-lang": "de",
+                    "#text": "S12-VL-F2/WA-1/SF-4/F-RLU1"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "24",
+            "name": [
+                "S13-FV-2/WA-2/SF-WT",
+                {
+                    "-lang": "de",
+                    "#text": "S13-FV-2/WA-2/SF-WT"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "26",
+            "name": [
+                "S14-KF-1/KF-NH",
+                {
+                    "-lang": "de",
+                    "#text": "S14-KF-1/KF-NH"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "28",
+            "name": [
+                "S15-KF-2/SF-K2",
+                {
+                    "-lang": "de",
+                    "#text": "S15-KF-2/SF-K2"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "30",
+            "name": [
+                "S16-BF/BF-1/F-RLU2",
+                {
+                    "-lang": "de",
+                    "#text": "S16-BF/BF-1/F-RLU2"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "32",
+            "name": [
+                "SensorVolumenstrom_Regler_GAS1_TotalWert_L",
+                {
+                    "-lang": "de",
+                    "#text": "SensorVolumenstrom_Regler_GAS1_TotalWert_L"
+                  }
+                ],
+            "bitSize": "31",
+            "unit": " L"
+          },
+          {
+            "offset": "36",
+            "name": [
+                "SensorVolumenstrom_Regler_GAS2_TotalWert_L",
+                {
+                    "-lang": "de",
+                    "#text": "SensorVolumenstrom_Regler_GAS2_TotalWert_L"
+                  }
+                ],
+            "bitSize": "31",
+            "unit": " L"
+          },
+          {
+            "offset": "40",
+            "name": [
+                "SensorVolumenstrom_Regler_GDS1_TotalWert_L",
+                {
+                    "-lang": "de",
+                    "#text": "SensorVolumenstrom_Regler_GDS1_TotalWert_L"
+                  }
+                ],
+            "bitSize": "31",
+            "unit": " L"
+          },
+          {
+            "offset": "44",
+            "name": [
+                "SensorVolumenstrom_Regler_GDS2_TotalWert_L",
+                {
+                    "-lang": "de",
+                    "#text": "SensorVolumenstrom_Regler_GDS2_TotalWert_L"
+                  }
+                ],
+            "bitSize": "31",
+            "unit": " L"
+          },
+          {
+            "offset": "48",
+            "name": [
+                "Sensor_Regler_Druck_GAS1_Wert_Bar",
+                {
+                    "-lang": "de",
+                    "#text": "Sensor_Regler_Druck_GAS1_Wert_Bar"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.01",
+            "unit": " bar"
+          },
+          {
+            "offset": "50",
+            "name": [
+                "Sensor_Regler_Druck_GAS2_Wert_Bar",
+                {
+                    "-lang": "de",
+                    "#text": "Sensor_Regler_Druck_GAS2_Wert_Bar"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.01",
+            "unit": " bar"
+          },
+          {
+            "offset": "52",
+            "name": [
+                "Sensor_Regler_Druck_GDS1_Wert_Bar",
+                {
+                    "-lang": "de",
+                    "#text": "Sensor_Regler_Druck_GDS1_Wert_Bar"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.01",
+            "unit": " bar"
+          },
+          {
+            "offset": "54",
+            "name": [
+                "Sensor_Regler_Druck_GDS2_Wert_Bar",
+                {
+                    "-lang": "de",
+                    "#text": "Sensor_Regler_Druck_GDS2_Wert_Bar"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.01",
+            "unit": " bar"
+          },
+          {
+            "offset": "56",
+            "name": [
+                "R1-SP-1",
+                {
+                    "-lang": "de",
+                    "#text": "R1-SP-1"
+                  }
+                ],
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "57",
+            "name": [
+                "R2-SP-2",
+                {
+                    "-lang": "de",
+                    "#text": "R2-SP-2"
+                  }
+                ],
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "58",
+            "name": [
+                "R3-BLP/1",
+                {
+                    "-lang": "de",
+                    "#text": "R3-BLP/1"
+                  }
+                ],
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "59",
+            "name": [
+                "R4-SV1/V-RLU",
+                {
+                    "-lang": "de",
+                    "#text": "R4-SV1/V-RLU"
+                  }
+                ],
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "60",
+            "name": [
+                "R5-HKP1",
+                {
+                    "-lang": "de",
+                    "#text": "R5-HKP1"
+                  }
+                ],
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "61",
+            "name": [
+                "R6-MV-1_auf",
+                {
+                    "-lang": "de",
+                    "#text": "R6-MV-1_auf"
+                  }
+                ],
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "62",
+            "name": [
+                "R7-MV-1_zu",
+                {
+                    "-lang": "de",
+                    "#text": "R7-MV-1_zu"
+                  }
+                ],
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "63",
+            "name": [
+                "R8-KLP-1/HKP-2",
+                {
+                    "-lang": "de",
+                    "#text": "R8-KLP-1/HKP-2"
+                  }
+                ],
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "64",
+            "name": [
+                "R9-KLP-2/SP-3",
+                {
+                    "-lang": "de",
+                    "#text": "R9-KLP-2/SP-3"
+                  }
+                ],
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "65",
+            "name": [
+                "R10-SV-2/HKP-2/V-RL",
+                {
+                    "-lang": "de",
+                    "#text": "R10-SV-2/HKP-2/V-RL"
+                  }
+                ],
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "66",
+            "name": [
+                "R11-MV-2_auf/BLP-2/SV-3",
+                {
+                    "-lang": "de",
+                    "#text": "R11-MV-2 auf/BLP-2/SV-3"
+                  }
+                ],
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "67",
+            "name": [
+                "R12-MV-2_zu/SV-3/V-RLU",
+                {
+                    "-lang": "de",
+                    "#text": "R12-MV-2 zu/SV-3/V-RLU"
+                  }
+                ],
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "68",
+            "name": [
+                "R13-ZP",
+                {
+                    "-lang": "de",
+                    "#text": "R13-ZP"
+                  }
+                ],
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "69",
+            "name": [
+                "R14-RP",
+                {
+                    "-lang": "de",
+                    "#text": "R14-RP"
+                  }
+                ],
+            "bitSize": "7",
+            "unit": " %"
+          },
+          {
+            "offset": "72",
+            "name": [
+                "Hk1_T_VorlSoll",
+                {
+                    "-lang": "de",
+                    "#text": "Hk1_T_VorlSoll"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "74",
+            "name": [
+                "Hk2_T_VorlSoll",
+                {
+                    "-lang": "de",
+                    "#text": "Hk2_T_VorlSoll"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "76",
+            "name": [
+                "Hk3_T_VorlSoll",
+                {
+                    "-lang": "de",
+                    "#text": "Hk3_T_VorlSoll"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "78",
+            "name": [
+                "Hk4_T_VorlSoll",
+                {
+                    "-lang": "de",
+                    "#text": "Hk4_T_VorlSoll"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "80",
+            "name": [
+                "Hk5_T_VorlSoll",
+                {
+                    "-lang": "de",
+                    "#text": "Hk5_T_VorlSoll"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "82",
+            "name": [
+                "SW_VL_Soll",
+                {
+                    "-lang": "de",
+                    "#text": "SW_VL_Soll"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "84",
+            "name": [
+                "Wmz1_Wert_Wh",
+                {
+                    "-lang": "de",
+                    "#text": "Wmz1_Wert_Wh"
+                  }
+                ],
+            "bitSize": "31",
+            "unit": " Wh"
+          },
+          {
+            "offset": "88",
+            "name": [
+                "Wmz2_Wert_Wh",
+                {
+                    "-lang": "de",
+                    "#text": "Wmz2_Wert_Wh"
+                  }
+                ],
+            "bitSize": "31",
+            "unit": " Wh"
+          },
+          {
+            "offset": "92",
+            "name": [
+                "Systemdatum",
+                {
+                    "-lang": "de",
+                    "#text": "Systemdatum"
+                  }
+                ],
+            "bitSize": "31",
+            "format": "r"
+          },
+          {
+            "offset": "96",
+            "name": [
+                "SensorBenutzt_bit_0..31",
+                {
+                    "-lang": "de",
+                    "#text": "SensorBenutzt_bit_0..31"
+                  }
+                ],
+            "bitSize": "32"
+          },
+          {
+            "offset": "100",
+            "name": [
+                "SensorBenutzt_bit_31..63",
+                {
+                    "-lang": "de",
+                    "#text": "SensorBenutz_bit_31..63"
+                  }
+                ],
+            "bitSize": "32"
+          },
+          {
+            "offset": "104",
+            "name": [
+                "Error SensorBruch_bit_0..31",
+                {
+                    "-lang": "de",
+                    "#text": "Error SensorBruch bit 0..31"
+                  }
+                ],
+            "bitSize": "32"
+          },
+          {
+            "offset": "108",
+            "name": [
+                "Error SensorBruch_bit_31..63",
+                {
+                    "-lang": "de",
+                    "#text": "Error SensorBruch bit 31..63"
+                  }
+                ],
+            "bitSize": "32"
+          },
+          {
+            "offset": "112",
+            "name": [
+                "Error SensorKurzschluss_bit_0..31",
+                {
+                    "-lang": "de",
+                    "#text": "Error SensorKurzschluss bit 0..31"
+                  }
+                ],
+            "bitSize": "32"
+          },
+          {
+            "offset": "116",
+            "name": [
+                "Error SensorKurzschluss_bit_31..63",
+                {
+                    "-lang": "de",
+                    "#text": "Error SensorKurzschluss bit 31..63"
+                  }
+                ],
+            "bitSize": "32"
+          },
+          {
+            "offset": "120",
+            "name": [
+                "Errormask",
+                {
+                    "-lang": "de",
+                    "#text": "Errormask"
+                  }
+                ],
+            "bitSize": "16"
+          },
+          {
+            "offset": "122",
+            "name": [
+                "Warningmask",
+                {
+                    "-lang": "de",
+                    "#text": "Warningmask"
+                  }
+                ],
+            "bitSize": "16"
+          },
+          {
+            "offset": "124",
+            "name": [
+                "Systemflow.Parameteraenderungen",
+                {
+                    "-lang": "de",
+                    "#text": "Systemflow.Parameteraenderungen"
+                  }
+                ],
+            "bitSize": "16"
+          }
+        ]
+      },
+      {
+        "destination": "0x0010",
+        "source": "0x7342",
+        "command": "0x0100",
+        "field": [
+          {
+            "offset": "0",
+            "name": [
+                "Temperatur_Sensor_1",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_1"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "2",
+            "name": [
+                "Temperatur_Sensor_2",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_2"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "4",
+            "name": [
+                "Temperatur_Sensor_3",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_3"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "6",
+            "name": [
+                "Temperatur_Sensor_4",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_4"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "8",
+            "name": [
+                "Temperatur_Sensor_5",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_5"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "10",
+            "name": [
+                "Temperatur_Sensor_6",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_6"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "12",
+            "name": [
+                "Drehzahl_R1",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R1"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "13",
+            "name": [
+                "Drehzahl_R2",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R2"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "14",
+            "name": [
+                "Drehzahl_R3",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R3"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "15",
+            "name": [
+                "Drehzahl_R4",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R4"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "16",
+            "name": [
+                "Drehzahl_R5",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R5"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          }
+        ]
+      },
+      {
+        "destination": "0x0010",
+        "source": "0x7343",
+        "command": "0x0100",
+        "field": [
+          {
+            "offset": "0",
+            "name": [
+                "Temperatur_Sensor_1",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_1"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "2",
+            "name": [
+                "Temperatur_Sensor_2",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_2"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "4",
+            "name": [
+                "Temperatur_Sensor_3",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_3"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "6",
+            "name": [
+                "Temperatur_Sensor_4",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_4"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "8",
+            "name": [
+                "Temperatur_Sensor_5",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_5"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "10",
+            "name": [
+                "Temperatur_Sensor_6",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_6"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "12",
+            "name": [
+                "Drehzahl_R1",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R1"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "13",
+            "name": [
+                "Drehzahl_R2",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R2"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "14",
+            "name": [
+                "Drehzahl_R3",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R3"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "15",
+            "name": [
+                "Drehzahl_R4",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R4"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "16",
+            "name": [
+                "Drehzahl_R5",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R5"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          }
+        ]
+      },
+      {
+        "destination": "0x0010",
+        "source": "0x7344",
+        "command": "0x0100",
+        "field": [
+          {
+            "offset": "0",
+            "name": [
+                "Temperatur_Sensor_1",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_1"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "2",
+            "name": [
+                "Temperatur_Sensor_2",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_2"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "4",
+            "name": [
+                "Temperatur_Sensor_3",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_3"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "6",
+            "name": [
+                "Temperatur_Sensor_4",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_4"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "8",
+            "name": [
+                "Temperatur_Sensor_5",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_5"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "10",
+            "name": [
+                "Temperatur_Sensor_6",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_6"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "12",
+            "name": [
+                "Drehzahl_R1",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R1"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "13",
+            "name": [
+                "Drehzahl_R2",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R2"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "14",
+            "name": [
+                "Drehzahl_R3",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R3"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "15",
+            "name": [
+                "Drehzahl_R4",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R4"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "16",
+            "name": [
+                "Drehzahl_R5",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R5"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          }
+        ]
+      },
+      {
+        "destination": "0x0010",
+        "source": "0x7345",
+        "command": "0x0100",
+        "field": [
+          {
+            "offset": "0",
+            "name": [
+                "Temperatur_Sensor_1",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_1"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "2",
+            "name": [
+                "Temperatur_Sensor_2",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_2"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "4",
+            "name": [
+                "Temperatur_Sensor_3",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_3"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "6",
+            "name": [
+                "Temperatur_Sensor_4",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_4"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "8",
+            "name": [
+                "Temperatur_Sensor_5",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_5"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "10",
+            "name": [
+                "Temperatur_Sensor_6",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_6"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "12",
+            "name": [
+                "Drehzahl_R1",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R1"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "13",
+            "name": [
+                "Drehzahl_R2",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R2"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "14",
+            "name": [
+                "Drehzahl_R3",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R3"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "15",
+            "name": [
+                "Drehzahl_R4",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R4"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "16",
+            "name": [
+                "Drehzahl R5",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl R5"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          }
+        ]
+      },
+      {
+        "destination": "0x0010",
+        "source": "0x7346",
+        "command": "0x0100",
+        "field": [
+          {
+            "offset": "0",
+            "name": [
+                "Temperatur_Sensor_1",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_1"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "2",
+            "name": [
+                "Temperatur_Sensor_2",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_2"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "4",
+            "name": [
+                "Temperatur_Sensor_3",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_3"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "6",
+            "name": [
+                "Temperatur_Sensor_4",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_4"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "8",
+            "name": [
+                "Temperatur_Sensor_5",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_5"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "10",
+            "name": [
+                "Temperatur_Sensor_6",
+                {
+                    "-lang": "de",
+                    "#text": "Temperatur_Sensor_6"
+                  }
+                ],
+            "bitSize": "15",
+            "factor": "0.1",
+            "unit": " °C"
+          },
+          {
+            "offset": "12",
+            "name": [
+                "Drehzahl_R1",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R1"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "13",
+            "name": [
+                "Drehzahl_R2",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R2"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "14",
+            "name": [
+                "Drehzahl_R3",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R3"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "15",
+            "name": [
+                "Drehzahl_R4",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R4"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          },
+          {
+            "offset": "16",
+            "name": [
+                "Drehzahl_R5",
+                {
+                    "-lang": "de",
+                    "#text": "Drehzahl_R5"
+                  }
+                ],
+            "bitSize": "8",
+            "unit": " %"
+          }
+        ]
+      }
+    ]
+  }
+}

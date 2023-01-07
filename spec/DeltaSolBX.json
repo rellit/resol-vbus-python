@@ -1,0 +1,534 @@
+{
+  "vbusSpecification": {
+    "device": [
+      {
+        "address": "0x7421",
+        "mask": "0xFFFF",
+        "name": "DeltaSol BX",
+        "isMaster": "true"
+      }
+    ],
+    "packet": [
+      {
+      "destination": "0x0010",
+      "source": "0x7421",
+      "command": "0x0100",
+      "field": [
+        {
+          "offset": "0",
+          "name": [
+            "Temperatur Sensor 1",
+            {
+              "-lang": "en",
+              "#text": "Temperature sensor 1"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "0.1",
+          "unit": " °C"
+        },
+        {
+          "offset": "2",
+          "name": [
+            "Temperatur Sensor 2",
+            {
+              "-lang": "en",
+              "#text": "Temperature sensor 2"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "0.1",
+          "unit": " °C"
+        },
+        {
+          "offset": "4",
+          "name": [
+            "Temperatur Sensor 3",
+            {
+              "-lang": "en",
+              "#text": "Temperature sensor 3"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "0.1",
+          "unit": " °C"
+        },
+        {
+          "offset": "6",
+          "name": [
+            "Temperatur Sensor 4",
+            {
+              "-lang": "en",
+              "#text": "Temperature sensor 4"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "0.1",
+          "unit": " °C"
+        },
+        {
+          "offset": "8",
+          "name": [
+            "Temperatur Sensor 5",
+            {
+              "-lang": "en",
+              "#text": "Temperature sensor 5"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "0.1",
+          "unit": " °C"
+        },
+        {
+          "offset": "10",
+          "name": [
+            "Temperatur RPS",
+            {
+              "-lang": "en",
+              "#text": "Temperature RPS"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "0.1",
+          "unit": " °C"
+        },
+        {
+          "offset": "12",
+          "name": [
+            "Druck RPS",
+            {
+              "-lang": "en",
+              "#text": "Pressure RPS"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "0.1",
+          "unit": " Bar"
+        },
+        {
+          "offset": "14",
+          "name": [
+            "Temperatur VFS",
+            {
+              "-lang": "en",
+              "#text": "Temperature VFS"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "0.1",
+          "unit": " °C"
+        },
+        {
+          "offset": "16",
+          "name": [
+            "Durchfluss VFS",
+            {
+              "-lang": "en",
+              "#text": "Flow VFS"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "1",
+          "unit": " l/h"
+        },
+        {
+          "offset": "24",
+          "name": [
+            "Drehzahl Relais 1",
+            {
+              "-lang": "en",
+              "#text": "Relais 1"
+            }
+          ],
+          "bitSize": "8",
+          "unit": " %"
+        },
+        {
+          "offset": "25",
+          "name": [
+            "Drehzahl Relais 2",
+            {
+              "-lang": "en",
+              "#text": "Relais 2"
+            }
+          ],
+          "bitSize": "8",
+          "unit": " %"
+        },
+        {
+          "offset": "26",
+          "name": [
+            "Drehzahl Relais 3",
+            {
+              "-lang": "en",
+              "#text": "Relais 3"
+            }
+          ],
+          "bitSize": "8",
+          "unit": " %"
+        },
+        {
+          "offset": "27",
+          "name": [
+            "Drehzahl Relais 4",
+            {
+              "-lang": "en",
+              "#text": "Relais 4"
+            }
+          ],
+          "bitSize": "8",
+          "unit": " %"
+        },
+        {
+          "offset": "22",
+          "name": [
+            "PWM 1",
+            {
+              "-lang": "en",
+              "#text": "PWM 1"
+            }
+          ],
+          "bitSize": "8",
+          "unit": " %"
+        },
+        {
+          "offset": "23",
+          "name": [
+            "PWM 2",
+            {
+              "-lang": "en",
+              "#text": "PWM 2"
+            }
+          ],
+          "bitSize": "8",
+          "unit": " %"
+        },
+        {
+          "offset": "16",
+          "name": [
+            "Durchfluss VFS",
+            {
+              "-lang": "en",
+              "#text": "Flow VFS"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "1",
+          "unit": " l/h"
+        },
+        {
+          "offset": "18",
+          "name": [
+            "Durchfluss V40",
+            {
+              "-lang": "en",
+              "#text": "Flow V40"
+            }
+          ],
+          "bitSize": "15",
+          "factor": "1",
+          "unit": " l/h"
+        },
+        {
+          "offset": "48",
+          "name": [
+            "Wärmemenge",
+            {
+              "-lang": "en",
+              "#text": "Heat qty."
+            }
+          ],
+          "bitSize": "31",
+          "factor": "1",
+          "unit": " Wh"
+        },
+        {
+          "offset": "54",
+          "name": [
+            "Systemzeit",
+            {
+              "-lang": "en",
+              "#text": "System time"
+            }
+          ],
+          "bitSize": "16",
+          "format": "t",
+          "timeRef": "1"
+        },
+        {
+          "offset": "56",
+          "name": [
+            "Datum",
+            {
+              "-lang": "en",
+              "#text": "Date"
+            }
+          ],
+          "bitSize": "32"
+        },
+        {
+          "offset": "52",
+          "name": ["Version"],
+          "bitSize": "16",
+          "factor": "0.01"
+        },
+        {
+          "offset": "28",
+          "name": [
+            "Betriebssekunden Relais 1",
+            {
+              "-lang": "en",
+              "#text": "W R1"
+            }
+          ],
+          "bitSize": "32",
+          "unit": " s"
+        },
+        {
+          "offset": "32",
+          "name": [
+            "Betriebssekunden Relais 2",
+            {
+              "-lang": "en",
+              "#text": "W R2"
+            }
+          ],
+          "bitSize": "32",
+          "unit": " s"
+        },
+        {
+          "offset": "36",
+          "name": [
+            "Betriebssekunden Relais 3",
+            {
+              "-lang": "en",
+              "#text": "W R3"
+            }
+          ],
+          "bitSize": "32",
+          "unit": " s"
+        },
+        {
+          "offset": "40",
+          "name": [
+            "Betriebssekunden Relais 4",
+            {
+              "-lang": "en",
+              "#text": "W R4"
+            }
+          ],
+          "bitSize": "32",
+          "unit": " s"
+        },
+        {
+          "offset": "46",
+          "name": [
+            "Status",
+            {
+              "-lang": "en",
+              "#text": "Status"
+            }
+          ],
+          "bitSize": "16"
+        },
+        {
+          "offset": "46",
+          "name": ["Blockierschutz 1"],
+          "bitSize": "1",
+          "bitPos": "0"
+        },
+        {
+          "offset": "46",
+          "name": ["Blockierschutz 2"],
+          "bitSize": "1",
+          "bitPos": "1"
+        },
+        {
+          "offset": "46",
+          "name": ["Blockierschutz 3"],
+          "bitSize": "1",
+          "bitPos": "2"
+        },
+        {
+          "offset": "46",
+          "name": ["Blockierschutz 4"],
+          "bitSize": "1",
+          "bitPos": "3"
+        },
+        {
+          "offset": "46",
+          "name": ["Initialisierung"],
+          "bitSize": "1",
+          "bitPos": "4"
+        },
+        {
+          "offset": "46",
+          "name": ["Füllung"],
+          "bitSize": "1",
+          "bitPos": "5"
+        },
+        {
+          "offset": "46",
+          "name": ["Stabilisierung"],
+          "bitSize": "1",
+          "bitPos": "6"
+        },
+        {
+          "offset": "46",
+          "name": ["Pumpenverzögerung"],
+          "bitSize": "1",
+          "bitPos": "7"
+        },
+        {
+          "offset": "47",
+          "name": ["Überwärmeabfuhr"],
+          "bitSize": "1",
+          "bitPos": "0"
+        },
+        {
+          "offset": "47",
+          "name": ["Nachlauf"],
+          "bitSize": "1",
+          "bitPos": "1"
+        },
+        {
+          "offset": "47",
+          "name": ["Thermische Desinfektion"],
+          "bitSize": "1",
+          "bitPos": "2"
+        },
+        {
+          "offset": "47",
+          "name": ["Systemkühlung"],
+          "bitSize": "1",
+          "bitPos": "3"
+        },
+        {
+          "offset": "47",
+          "name": ["Speicherkühlung"],
+          "bitSize": "1",
+          "bitPos": "4"
+        },
+        {
+          "offset": "47",
+          "name": ["Spreizung"],
+          "bitSize": "1",
+          "bitPos": "5"
+        },
+        {
+          "offset": "47",
+          "name": ["Frostschutz"],
+          "bitSize": "1",
+          "bitPos": "6"
+        },
+        {
+          "offset": "47",
+          "name": ["Kollektorkühlung"],
+          "bitSize": "1",
+          "bitPos": "7"
+        },
+        {
+          "offset": "20",
+          "name": [
+            "Einheit",
+            {
+              "-lang": "en",
+              "#text": "Unit"
+            }
+          ],
+          "bitSize": "8"
+        },
+        {
+          "offset": "44",
+          "name": [
+            "Fehler",
+            {
+              "-lang": "en",
+              "#text": "Error"
+            }
+          ],
+          "bitSize": "16"
+        },
+        {
+          "offset": "44",
+          "name": ["Fehler S1"],
+          "bitSize": "1",
+          "bitPos": "0"
+        },
+        {
+          "offset": "44",
+          "name": ["Fehler S2"],
+          "bitSize": "1",
+          "bitPos": "1"
+        },
+        {
+          "offset": "44",
+          "name": ["Fehler S3"],
+          "bitSize": "1",
+          "bitPos": "2"
+        },
+        {
+          "offset": "44",
+          "name": ["Fehler S4"],
+          "bitSize": "1",
+          "bitPos": "3"
+        },
+        {
+          "offset": "44",
+          "name": ["Fehler S5"],
+          "bitSize": "1",
+          "bitPos": "4"
+        },
+        {
+          "offset": "44",
+          "name": ["Fehler S6"],
+          "bitSize": "1",
+          "bitPos": "5"
+        },
+        {
+          "offset": "44",
+          "name": ["Fehler S7"],
+          "bitSize": "1",
+          "bitPos": "6"
+        },
+        {
+          "offset": "44",
+          "name": ["Fehler S8"],
+          "bitSize": "1",
+          "bitPos": "7"
+        },
+        {
+          "offset": "45",
+          "name": ["Fehler S9"],
+          "bitSize": "1",
+          "bitPos": "0"
+        },
+        {
+          "offset": "45",
+          "name": ["Fehler V40"],
+          "bitSize": "1",
+          "bitPos": "1"
+        },
+        {
+          "offset": "45",
+          "name": ["Leckage"],
+          "bitSize": "1",
+          "bitPos": "2"
+        },
+        {
+          "offset": "45",
+          "name": ["Überdruck"],
+          "bitSize": "1",
+          "bitPos": "3"
+        },
+        {
+          "offset": "45",
+          "name": ["Durchflussfehler"],
+          "bitSize": "1",
+          "bitPos": "4"
+        }
+      ]
+    }
+    ]
+  }
+}
