@@ -148,6 +148,7 @@ def get_payload(msg):
     return payload
 
 
+
 # parse payload and put result in result
 def parse_payload(msg):
     payload = get_payload(msg)
@@ -161,16 +162,11 @@ def parse_payload(msg):
                 packet['command'].lower() == get_command(msg).lower():
             result[get_source_name(msg)] = {}
             for field in packet['field']:
-                result[get_source_name(msg)][field['name']] = \
-                    str(
-                        gb(payload, field['offset'], int(field['offset'])+((int(field['bitSize'])+1) / 8)) *
-                        (Decimal(field['factor']) if 'factor' in field else 1)
-                    ) + \
-                    (field['unit']
-                        if config.use_units
-                        and 'unit' in field
-                        and isinstance(field['unit'], str)
-                     else '')
+                result[get_source_name(msg)][field['name'][0]] = str(
+                    gb(payload, field['offset'], int(field['offset'])+((int(field['bitSize'])+1) / 8)) *
+                    (Decimal(field['factor']) if 'factor' in field else 1)) + \
+                    (field['unit'] if 'unit' in field and config.use_units else '')
+
 
 def format_message_pv1(msg):
     parsed = "PARSED: \n"
