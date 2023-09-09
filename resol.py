@@ -163,10 +163,12 @@ def parse_payload(msg):
             result[get_source_name(msg)] = {}
             for field in packet['field']:
                 result[get_source_name(msg)][field['name'][0]] = str(
-                    gb(payload, field['offset'], int(field['offset'])+((int(field['bitSize'])+1) / 8)) *
-                    (Decimal(field['factor']) if 'factor' in field else 1)) + \
-                    (field['unit'] if 'unit' in field and config.use_units else '')
-
+                        gb(payload, field['offset'], int(field['offset'])+((int(field['bitSize'])+1) / 8)) *
+                        (Decimal(field['factor']) if 'factor' in field else 1)
+                    ) + \
+                    (field['unit'] 
+                         if 'unit' in field and config.use_units 
+                    else '')
 
 def format_message_pv1(msg):
     parsed = "PARSED: \n"
