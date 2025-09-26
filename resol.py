@@ -161,7 +161,9 @@ def parse_payload(msg):
                 packet['command'].lower() == get_command(msg).lower():
             result[get_source_name(msg)] = {}
             for field in packet['field']:
-                result[get_source_name(msg)][field['name']] = \
+                # extract field name as string, as it might be a list and newer Pythons need a string
+                field_name = field['name'][0] if isinstance(field['name'], list) else field['name']
+                result[get_source_name(msg)][field_name] = \
                     str(
                         gb(payload, field['offset'], int(field['offset'])+((int(field['bitSize'])+1) / 8)) *
                         (Decimal(field['factor']) if 'factor' in field else 1)
